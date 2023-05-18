@@ -1,0 +1,129 @@
+.project-parent {
+    background: -webkit-linear-gradient(225deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #FFFFFF;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-details {
+    opacity: 1;
+}
+
+.card-details.show {
+    opacity: 1;
+}
+
+.card-title {
+    color: #FFFFFF;
+}
+
+.card-description {
+    text-align: justify;
+}
+
+.btn-parent {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.detail-btn,
+.next-btn {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+
+.detail-btn:hover,
+.next-btn:hover {
+    cursor: pointer;
+}
+
+.show-btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #03405B;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 16px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.show-btn:hover {
+    background-color: #FFFFFF;
+    color: #03405B;
+    border: none;
+}
+
+/* All Card  */
+
+.allproject-parent {
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.allcard-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background-color: #FFFFFF;
+    color: #03405B;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .allcard-details {
+    opacity: 1;
+}
+
+.allcard-details.show {
+    opacity: 1;
+}
+
+.card-title {
+    color: #03405B;
+}
+
+.detail-btn,
+.next-btn {
+    background-color: transparent;
+    border: none;
+    color: #03405B;
+}

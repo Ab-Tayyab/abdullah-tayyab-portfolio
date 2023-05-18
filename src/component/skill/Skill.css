@@ -1,0 +1,39 @@
+.skill-parent {
+    width: 100%;
+    margin-bottom: 100px
+}
+
+.skill-parent-heading {
+    color: #03405B;
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+}
+
+.skill-slider {
+    width: 200px;
+    height: 200px;
+    background: white;
+    margin: 15px;
+    margin-bottom: 70px;
+}
+
+.slider-img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.slider-name {
+    color: #03405B;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.slider-line {
+    width: 50px;
+    margin: auto;
+    padding-top: 10px;
+    border-bottom: 3px solid #03405B;
+}

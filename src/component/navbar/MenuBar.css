@@ -1,0 +1,69 @@
+
+ .main-drawer {
+   position: relative;
+   text-align: center;
+   background: -webkit-linear-gradient(315deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+   color: white;
+   height: 100%;
+ }
+
+ .main-drawer-child1 {
+   position: absolute;
+   right: 0;
+   margin-right: 20px;
+   height: 70px;
+ }
+
+ .close-icon,
+ .menu-icon {
+   line-height: 5em;
+   margin-top: 6px;
+   font-size: 50px;
+ }
+
+ .close-icon{
+  margin-top: 20px;
+ }
+
+ .close-icon:hover,
+ .menu-icon:hover {
+  color: #03405B;
+  background-color: #FFFFFF;
+ }
+
+ .main-drawer-child2-subchild1 {
+   text-align: center;
+   width: 100px;
+   margin: auto;
+   line-height: 3.5em;
+   font-size: 20px;
+ }
+
+ .main-drawer-child2-subchild2 {
+   padding-top: 20px;
+   display: flex;
+   justify-content: space-around;
+   width: 300px;
+   margin: auto;
+ }
+
+ .social-link {
+   color: white;
+   font-size: 40px;
+ }
+
+ .social-link:hover {
+  color: #03405B;
+ }
+
+ .appbar {
+   background: -webkit-linear-gradient(315deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+   color: #FFFFFF;
+   height: 75px;
+   padding-top: 5px;
+ }
+
+ .appbar img{
+  display: flex;
+  flex-grow: 1;
+ }
