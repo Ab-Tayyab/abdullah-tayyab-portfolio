@@ -1,34 +1,51 @@
-.skill-parent {
-    width: 100%;
-    margin-bottom: 100px
-}
-
 .skill-parent-heading {
     color: #03405B;
     text-align: center;
-    padding: 30px 0px 30px 0px;
+    padding: 30px 0px;
+}
+
+.skill-parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill-parent>div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    justify-content: center;
 }
 
 .skill-slider {
-    width: 200px;
-    height: 200px;
-    background: white;
+    background-color: #FFFFFF;
+    width: 170px;
+    height: 170px;
+    color: #FFFFFF;
     margin: 15px;
+    padding: 10px;
     margin-bottom: 70px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 5px;
 }
 
 .slider-img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: block;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 .slider-name {
-    color: #03405B;
     padding-top: 10px;
     text-align: center;
+    font-size: 20px;
+    color: #03405B;
+    transition: color 0.3s; 
 }
 
 .slider-line {
@@ -36,4 +53,18 @@
     margin: auto;
     padding-top: 10px;
     border-bottom: 3px solid #03405B;
+    transition: border-color 0.3s;
+}
+
+.skill-slider:hover{
+    background-color: #03405B;
+    color: #FFFFFF;
+}
+
+.skill-slider:hover .slider-name {
+    color: #FFFFFF;
+}
+
+.skill-slider:hover .slider-line {
+    border-color: #FFFFFF;
 }

@@ -8,6 +8,7 @@ import Project from "./component/project/Project";
 import AllProject from "./component/project/AllProject";
 import Contact from "./component/contact/Contact";
 import ScrollToTop from "./component/ScrollTop";
+import Faq from "./component/faqs/Faq";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Home />
             <Skill />
             <Project />
+            <Faq />
           </>} />
         <Route path='/about' element={<About />} />
         <Route path='/project' element={<AllProject />} />
