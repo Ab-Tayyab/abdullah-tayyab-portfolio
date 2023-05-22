@@ -1,0 +1,21 @@
+.resume-parent {
+    position: relative;
+}
+
+.resume-parent-child1 {
+    width: 100%;
+    height: 100vh;
+    background: -webkit-linear-gradient(225deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+}
+
+.resume-parent-child2 {
+    position: absolute;
+    width: 65%;
+    top: 50px;
+    right: 0;
+    bottom: -50px;
+    height: 85vh;
+    background: #FFFFFF;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}

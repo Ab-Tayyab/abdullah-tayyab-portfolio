@@ -12,37 +12,19 @@ const Skill = () => {
                 <div>
                     {
                         SkillApi.map((item) => {
-                            if (item.id % 2 !== 0) {
+                            return (
+                                <div className='skill-slider skill-slider-clr' key={item.id} data-aos="flip-left"
+                                    data-aos-easing="ease-out-cubic"
+                                    data-aos-duration="2000">
+                                    <img className='slider-img' src={item.img} alt="Skill Image" />
+                                    <h1 className='slider-name skill-slider-clr'>
+                                        {item.name}
+                                        <div className='slider-line skill-slider-clr' >
 
-                                return (
-                                    <Slide left>
-                                        <div className='skill-slider skill-slider-clr' key={item.id}>
-                                            <img className='slider-img' src={item.img} alt="Skill Image" />
-                                            <h1 className='slider-name skill-slider-clr'>
-                                                {item.name}
-                                                <div className='slider-line skill-slider-clr' >
-
-                                                </div>
-                                            </h1>
                                         </div>
-                                    </Slide>
-                                )
-                            }
-                            else {
-                                return (
-                                    <Slide right>
-                                        <div className='skill-slider skill-slider-clr' key={item.id}>
-                                            <img className='slider-img' src={item.img} alt="Skill Image" />
-                                            <h1 className='slider-name skill-slider-clr'>
-                                                {item.name}
-                                                <div className='slider-line skill-slider-clr' >
-
-                                                </div>
-                                            </h1>
-                                        </div>
-                                    </Slide>
-                                )
-                            }
+                                    </h1>
+                                </div>
+                            )
                         })
                     }
                 </div>

@@ -56,12 +56,12 @@ function DrawerAppBar(props) {
                   textDecoration: "none",
                   color: "white",
                 }} onClick={handleDrawerToggle}>
-                  <Button sx={{
+                  <Button className='btn-active' sx={{
                     color: "#FFFFFF",
                     "&:hover": {
                       color: "#03405B",
                       background: "#FFFFFF"
-                    }
+                    },
                   }}>
                     {item.name}
                   </Button>
@@ -84,7 +84,11 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', mb: "75px", }}>
+    <Box sx={{ display: 'flex', mb: "75px", }}
+    // data-aos="fade-down"
+    // data-aos-easing="linear"
+    // data-aos-duration="1500"
+    >
       <CssBaseline />
       <AppBar className='appbar' component="nav">
         <Toolbar>
@@ -127,12 +131,12 @@ function DrawerAppBar(props) {
                     textDecoration: "none",
                     color: "white",
                   }} >
-                    <Button sx={{
+                    <Button className='btn-active' sx={{
                       color: "#FFFFFF",
                       "&:hover": {
                         color: "#03405B",
                         background: "#FFFFFF"
-                      }
+                      },
                     }}>
                       {item.name}
                     </Button>

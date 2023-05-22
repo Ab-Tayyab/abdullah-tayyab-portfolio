@@ -1,57 +1,55 @@
+
 import React, { useState } from 'react';
 import './Faq.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
+const faqData = [
+    {
+        question: 'Who am I as a React JS developer?',
+        answer: "I am Abdullah Tayyab, a passionate React JS developer with 1 year of experience. I specialize in front-end web development, focusing on React JS. I have a strong understanding of React component-based architecture, state management using hooks and context API, and backend integration. I am dedicated to delivering high-quality solutions that provide intuitive and seamless user experiences. With a commitment to clean and maintainable code, I continuously stay updated with the latest trends and best practices in the React JS ecosystem.",
+    },
+    {
+        question: 'What is your experience as a React JS developer?',
+        answer: 'As a React JS developer with 1 year of experience, I have worked on various projects involving the development of interactive web applications using React JS. During this time, I have gained expertise in building single-page applications, web portals, and e-commerce platforms. My experience includes working with React component-based architecture, state management using hooks and context API, backend integration, and performance optimization techniques.',
+    },
+    {
+        question: 'How do you ensure code quality and maintainability in React projects?',
+        answer: 'Ensuring code quality and maintainability is a priority in my React projects. I adhere to industry best practices such as modular component architecture, clean code principles, and code reuse. I also make use of testing frameworks like Jest and React Testing Library to write comprehensive unit tests and integration tests. Regular code reviews, refactoring, and following coding standards contribute to maintaining high-quality and maintainable code.',
+    },
+    {
+        question: 'What is your approach to performance optimization in React applications?',
+        answer: 'My approach to optimizing performance in React applications involves various strategies. I focus on identifying and addressing performance bottlenecks using tools like React DevTools and Chrome DevTools. I implement techniques such as minimizing unnecessary re-renders, optimizing component lifecycles, and utilizing code-splitting and lazy loading. Leveraging caching techniques and production build optimizations like memoization helps enhance overall performance.',
+    },
+];
+
 
 const Faq = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
-    const toggleFAQ = (index) => {
+    const toggleAccordion = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-    const faqsData = [
-        {
-            question: 'What is React?',
-            answer: 'React is a JavaScript library for building user interfaces.',
-        },
-        {
-            question: 'How do you create a React component?',
-            answer: 'You can create a React component by defining a JavaScript function or a className that extends React.Component.',
-        },
-        // Add more FAQs here...
-    ];
-
     return (
-        <div className="accordion accordion-flush" id="accordionFlushExample">
-            <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingOne">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Accordion Item #1
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> className. This is the first item's accordion body.</div>
+        <div className="accordion">
+            {faqData.map((faq, index) => (
+                <div key={index} className="accordion-item">
+                    <div
+                        className={`accordion-title ${activeIndex === index ? 'active' : ''}`}
+                        onClick={() => toggleAccordion(index)}
+                    >
+                        {faq.question}
+                        <FontAwesomeIcon
+                            icon={activeIndex === index ? faChevronUp : faChevronDown}
+                            className="accordion-icon"
+                        />
+                    </div>
+                    <div className={`accordion-content ${activeIndex === index ? 'active' : ''}`}>
+                        {faq.answer}
+                    </div>
                 </div>
-            </div>
-            <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingTwo">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Accordion Item #2
-                    </button>
-                </h2>
-                <div id="flush-collapseTwo" className="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> className. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                </div>
-            </div>
-            <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-headingThree">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Accordion Item #3
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> className. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                </div>
-            </div>
+            ))}
         </div>
     );
 };

@@ -12,8 +12,10 @@ import Slide from 'react-reveal/Slide';
 const Home = () => {
     return (
         <div className="home-parent">
-            <Slide top>
-                <div className="home-parent-child1">
+            {/* <Slide top> */}
+                <div className="home-parent-child1" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500">
                     <div className="home-parent-child1-subchild">
                         <div className="home-parent-child1-subchild1" >
                             <img src={photo} />
@@ -30,28 +32,29 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </Slide>
-            <Slide bottom>
-                <div className="home-parent-child2">
-                    <div className="home-parent-child2-subchild" >
-                        < h1>Hello</h1>
-                        <h3>Here's who I am & what I do</h3>
-                        <div >
-                            <Link to="/resume" style={{
-                                textDecoration: "none",
-                            }}>
-                                <button className='home-btn1'>Resume</button></Link>
-                            <Link to="/projects" style={{
-                                textDecoration: "none",
-                            }}>
-                                <button className='home-btn2'>Projects</button>
-                            </Link>
-                        </div>
-                        <p > Hay! I am ABDULLAH TAYYAB and i'm React JS DeveloperI am confident in my ability to create visually appealing and user-friendly interfaces.</p>
-                        <p> Although I have also experience with back-end development, I am eager to learn and grow my skills in this area.</p>
+            {/* </Slide> */}
+            {/* <Slide bottom> */}
+            <div className="home-parent-child2" data-aos="fade-up"
+                data-aos-duration="3000">
+                <div className="home-parent-child2-subchild" >
+                    < h1>Hello</h1>
+                    <h3>Here's who I am & what I do</h3>
+                    <div >
+                        <Link to="/resume" style={{
+                            textDecoration: "none",
+                        }}>
+                            <button className='home-btn1'>Resume</button></Link>
+                        <Link to="/projects" style={{
+                            textDecoration: "none",
+                        }}>
+                            <button className='home-btn2'>Projects</button>
+                        </Link>
                     </div>
+                    <p > Hay! I am ABDULLAH TAYYAB and i'm React JS DeveloperI am confident in my ability to create visually appealing and user-friendly interfaces.</p>
+                    <p> Although I have also experience with back-end development, I am eager to learn and grow my skills in this area.</p>
                 </div>
-            </Slide>
+            </div>
+            {/* </Slide> */}
         </div>
     )
 }

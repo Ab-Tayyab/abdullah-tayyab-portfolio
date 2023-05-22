@@ -3,7 +3,6 @@ import { animateScroll as scroll } from 'react-scroll';
 import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 
 const Fotter = () => {
-
     const handleScrollToTop = () => {
         scroll.scrollToTop({
             duration: 2000,

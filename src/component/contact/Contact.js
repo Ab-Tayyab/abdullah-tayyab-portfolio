@@ -35,54 +35,56 @@ const Form = () => {
     };
 
     return (
-        <div className="form-container">
-            <h2>Contact Form</h2>
-            <form className="form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={name}
-                        onChange={handleNameChange}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        value={email}
-                        onChange={handleEmailChange}
-                        required
-                    />
-                </div>
+        <>
+            <div className="form-container">
+                <h2>Contact Form</h2>
+                <form className="form" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            value={name}
+                            onChange={handleNameChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            value={email}
+                            onChange={handleEmailChange}
+                            required
+                        />
+                    </div>
 
-                <div className="form-group">
-                    <input
-                        type="text"
-                        name="purpose"
-                        placeholder="Purpose of Contacting"
-                        value={purpose}
-                        onChange={handlePurposeChange}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <textarea
-                        name="message"
-                        placeholder="Your Message"
-                        value={message}
-                        onChange={handleMessageChange}
-                        required
-                    ></textarea>
-                </div>
-                <div className="form-group">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            name="purpose"
+                            placeholder="Purpose of Contacting"
+                            value={purpose}
+                            onChange={handlePurposeChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <textarea
+                            name="message"
+                            placeholder="Your Message"
+                            value={message}
+                            onChange={handleMessageChange}
+                            required
+                        ></textarea>
+                    </div>
+                    <div className="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </>
     );
 };
 
