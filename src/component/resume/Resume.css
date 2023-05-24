@@ -1,21 +1,19 @@
 .resume-parent {
-    position: relative;
+    background: -webkit-linear-gradient(225deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px;
 }
 
 .resume-parent-child1 {
-    width: 100%;
-    height: 100vh;
-    background: -webkit-linear-gradient(225deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+    width: 400px;
+    color: #FFFFFF;
 }
 
 .resume-parent-child2 {
-    position: absolute;
-    width: 65%;
-    top: 50px;
-    right: 0;
-    bottom: -50px;
-    height: 85vh;
-    background: #FFFFFF;
+    width: calc(100% - 400px);
+    background-color: #FFFFFF;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    z-index: 100px;
 }

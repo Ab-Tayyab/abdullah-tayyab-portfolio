@@ -2,7 +2,6 @@
 import React from 'react'
 import './Skill.css'
 import { SkillApi } from './SkillAPI'
-import Slide from 'react-reveal/Slide';
 
 const Skill = () => {
     return (
@@ -20,7 +19,6 @@ const Skill = () => {
                                     <h1 className='slider-name skill-slider-clr'>
                                         {item.name}
                                         <div className='slider-line skill-slider-clr' >
-
                                         </div>
                                     </h1>
                                 </div>

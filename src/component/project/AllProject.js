@@ -18,9 +18,9 @@ const AllProject = () => {
     return (
         <div className='allproject-parent'>
             <h1 style={{
-                color:"#03405B",
-                textAlign:"center",
-                padding:"20px 0px"
+                color: "#03405B",
+                textAlign: "center",
+                padding: "20px 0px"
             }}>My Projects</h1>
             <VerticalTimeline lineColor="#03405B" >
                 {
@@ -39,13 +39,15 @@ const AllProject = () => {
                                         <h3 className="card-title">{item.name}</h3>
                                         <p className="card-description">{item.detail}</p>
                                         <div className='btn-parent'>
-                                            <button className='detail-btn'><InfoOutlinedIcon style={{
-                                                fontSize: "40px"
-                                            }} /></button>
+                                                <InfoOutlinedIcon disabled style={{
+                                                    fontSize: "40px",
+                                                    color: "#03405B",
+                                                }} />
                                             <a href={item.url} target='_blank'>
-                                                <button className='next-btn'><LinkOutlinedIcon style={{
-                                                    fontSize: "40px"
-                                                }} /></button>
+                                                <LinkOutlinedIcon style={{
+                                                    fontSize: "40px",
+                                                    color: "#03405B",
+                                                }} />
                                             </a>
                                         </div>
                                     </div>

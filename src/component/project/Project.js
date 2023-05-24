@@ -38,16 +38,28 @@ const Project = () => {
                                     <div className="card" >
                                         <img src={item.img} alt="Project 1" className="card-image" />
                                         <div className={`card-details ${isHovered ? 'show' : ''}`}>
-                                            <h3 className="card-title">{item.name}</h3>
+                                            <h3 className="card-title" style={{
+                                                color: "#FFFFFF"
+                                            }}>{item.name}</h3>
                                             <p className="card-description">{item.detail}</p>
                                             <div className='btn-parent'>
-                                                <button className='detail-btn'><InfoOutlinedIcon style={{
-                                                    fontSize: "40px"
-                                                }} /></button>
+                                                <InfoOutlinedIcon disabled className='detail-btn' style={{
+                                                    fontSize: "40px",
+                                                    color: "#ffffff",
+                                                    "&:hover": {
+                                                        color: "#03405B",
+                                                        cursor: "pointer"
+                                                    }
+                                                }} />
                                                 <a href={item.url} target='_blank'>
-                                                    <button className='next-btn'><LinkOutlinedIcon style={{
-                                                        fontSize: "40px"
-                                                    }} /></button>
+                                                    <LinkOutlinedIcon className='next-btn' style={{
+                                                        fontSize: "40px",
+                                                        color: "#ffffff",
+                                                        "&:hover": {
+                                                            color: "#03405B",
+                                                            cursor: "pointer"
+                                                        }
+                                                    }} />
                                                 </a>
                                             </div>
                                         </div>
@@ -59,7 +71,7 @@ const Project = () => {
                 }
             </VerticalTimeline>
             <Link to="/project" style={{
-                textDecoration:"none",
+                textDecoration: "none",
             }}>
                 <button className='show-btn'>Show More</button>
             </Link>
