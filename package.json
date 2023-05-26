@@ -30,6 +30,7 @@
     "react-scroll-progress-bar": "^1.1.13",
     "react-slick": "^0.29.0",
     "react-spring": "^9.7.1",
+    "react-tsparticles": "^2.9.3",
     "react-type-animation": "^3.0.1",
     "react-vertical-timeline-component": "^3.6.0",
     "slick-carousel": "^1.8.1",

@@ -3,4 +3,5 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: -webkit-linear-gradient(225deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
 }

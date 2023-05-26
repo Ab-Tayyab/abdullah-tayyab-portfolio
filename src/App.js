@@ -12,8 +12,7 @@ import ScrollToTop from './component/ScrollTop';
 import Faq from './component/faqs/Faq';
 import Resume from './component/resume/Resume';
 
-import { Dna } from 'react-loader-spinner'
-import ProgressBar from "react-scroll-progress-bar";
+import { InfinitySpin } from 'react-loader-spinner'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -26,7 +25,7 @@ function App() {
     AOS.init();
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,15 +34,10 @@ function App() {
     <>
       <BrowserRouter>
         {isLoading ? (
-            <div className="loading-wrapper">
-            <Dna
-              visible={true}
-              height={80}
-              width={80}
-              margin="auto"
-              ariaLabel="dna-loading"
-              wrapperStyle={{}}
-              wrapperClass="dna-wrapper"
+          <div className="loading-wrapper">
+            <InfinitySpin
+              width='200'
+              color="#FFFFFF"
             />
           </div>
         ) : (

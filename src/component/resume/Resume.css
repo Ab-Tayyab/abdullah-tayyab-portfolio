@@ -1,19 +1,153 @@
 .resume-parent {
     background: -webkit-linear-gradient(225deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+    max-width: 900px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0px;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    padding: 50px 20px;
 }
 
 .resume-parent-child1 {
-    width: 400px;
-    color: #FFFFFF;
+    width: 350px;
+    margin: auto;
+    /* color: #97a6b4; */
+    color: #dddada;
+    padding: 20px;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.resume-parent-child1 h1 {
+    font-size: 25px;
+    font-weight: 800;
+    padding-top: 20px;
+}
+
+.resume-parent-child1 h2 {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.resume-parent-child1 h3 {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.education>div div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.certificate>div {
+    display: flex;
+    justify-content: space-between;
 }
 
 .resume-parent-child2 {
-    width: calc(100% - 400px);
+    max-width: 500px;
     background-color: #FFFFFF;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    z-index: 100px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    color: #7c8ea0;
+    padding: 20px;
+    font-family: sans-serif;
+    border: 1px solid#03405B;
+    margin: auto;
+}
+
+
+.resume-name {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.resume-job {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.resume-parent-child2 h1 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.resume-parent-child2 h2 {
+    font-size: 18px;
+    font-weight: 200;
+    text-align: left;
+}
+
+.resume-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.resume-contact>div {
+    display: flex;
+}
+
+.resume-contact>div>h2,
+.resume-contact>div>a {
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.resume-contact>div>a {
+    color: #97a6b4;
+    text-decoration: none;
+}
+
+.resume-contact>div>a:hover {
+    color: #03405B;
+}
+
+.resume-experience{
+    margin-top: 20px;
+}
+.resume-experience>div {
+    padding-top: 10px;
+}
+
+.resume-project>div {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 5px solid #03405B;
+}
+
+.resume-project h5 {
+    font-size: 18px;
+}
+
+.resume-project h6,
+.resume-project li,
+.resume-project p {
+    font-size: 14px;
+}
+
+@media (max-width:900px) {
+    .resume-parent {
+        flex-direction: column;
+    }
+
+    .resume-parent-child1 {
+        width: 500px;
+    }
+}
+
+@media (max-width:530px) {
+    .resume-parent-child1 {
+        width: 400px;
+    }
+}
+
+@media (max-width:530px) {
+    .resume-parent-child1 {
+        width: 300px;
+    }
 }
