@@ -2,9 +2,9 @@
  .main-drawer {
    position: relative;
    text-align: center;
-   background: -webkit-linear-gradient(315deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
-   color: white;
+  color: white;
    height: 100%;
+   background: linear-gradient(90deg, rgba(84,82,82,1) 0%, rgba(14,42,71,1) 0%);
  }
 
  .main-drawer-child1 {
@@ -57,7 +57,8 @@
  }
 
  .appbar {
-   background: -webkit-linear-gradient(315deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%);
+   /* background: -webkit-linear-gradient(315deg, hsla(204, 69%, 8%, 1) 0%,(rgba(0, 69, 158, 1)) 100%); */
+   background: linear-gradient(90deg, rgba(84,82,82,1) 0%, rgba(14,42,71,1) 0%);
    color: #FFFFFF;
    height: 75px;
    padding-top: 5px;

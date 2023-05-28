@@ -33,7 +33,7 @@ export const projectdata = [
         img: s1,
         icon: <BarChartOutlinedIcon />,
         url: "https://reactjs-expense-tracker-app.netlify.app/",
-        detail: "An expense tracker app allows you to monitor and categorize your expenses across different bank and investment accounts and credit cards. Some of these apps also offer budgeting tools, credit monitoring, mileage tracking, receipt keeping, and advice to grow your net worth."
+        detail: "An expense tracker app allows you to monitor and categorize your expenses. Feature Include: Edit"
     },
     {
         id: 3,

@@ -17,7 +17,7 @@ const Project = () => {
     };
 
     return (
-        <div className='project-parent'>
+        <div className='project-parent' id='project'>
             <h1 style={{
                 color: "#FFFFFF",
                 textAlign: "center",
@@ -32,33 +32,25 @@ const Project = () => {
                                 <VerticalTimelineElement onMouseEnter={handleHover} onMouseLeave={handleHover}
                                     className="vertical-timeline-element--work"
                                     contentArrowStyle={{ borderRight: '7px solid  #FFFFFF' }}
-                                    iconStyle={{ background: '#03405B', color: '#fff' }}
+                                    iconStyle={{ background: '#0E2A47', color: '#FFFFFF' }}
                                     icon={item.icon}
                                 >
                                     <div className="card" >
                                         <img src={item.img} alt="Project 1" className="card-image" />
                                         <div className={`card-details ${isHovered ? 'show' : ''}`}>
                                             <h3 className="card-title" style={{
-                                                color: "#FFFFFF"
+                                                color: "#c4cfd9",
                                             }}>{item.name}</h3>
                                             <p className="card-description">{item.detail}</p>
                                             <div className='btn-parent'>
                                                 <InfoOutlinedIcon disabled className='detail-btn' style={{
                                                     fontSize: "40px",
-                                                    color: "#ffffff",
-                                                    "&:hover": {
-                                                        color: "#03405B",
-                                                        cursor: "pointer"
-                                                    }
+                                                    color: "#c4cfd9",
                                                 }} />
                                                 <a href={item.url} target='_blank'>
                                                     <LinkOutlinedIcon className='next-btn' style={{
                                                         fontSize: "40px",
-                                                        color: "#ffffff",
-                                                        "&:hover": {
-                                                            color: "#03405B",
-                                                            cursor: "pointer"
-                                                        }
+                                                        color: "#c4cfd9",
                                                     }} />
                                                 </a>
                                             </div>

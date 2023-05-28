@@ -1,6 +1,9 @@
 import React from 'react'
 import { animateScroll as scroll } from 'react-scroll';
 import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import './Footer.css'
 
 const Fotter = () => {
     const handleScrollToTop = () => {
@@ -11,18 +14,21 @@ const Fotter = () => {
     };
 
     return (
-        <div style={{
-            position: "relative",
-            width: "100%",
-            minHeight: "70px",
-            background: "-webkit-linear-gradient(225deg, hsla(204, 69%, 8%, 1) 0%, hsla(198, 94%, 18%, 1) 50%, hsla(204, 69%, 8%, 1) 100%)",
-            position: "relative",
-        }}>
+        <div className='footer' >
             <div >
+                <div style={{
+                    width: "60px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    margin: "auto"
+                }}>
+                    <a className='social-link' href="https://www.linkedin.com/in/abdullahtayyab894/" target="_black"><LinkedInIcon /></a>
+                    <a className='social-link' href="https://wa.me/+923184579618" target="_black"><WhatsAppIcon /></a>
+                </div>
                 <h5 style={{
-                    paddingTop: "30px",
                     color: "white",
                     textAlign: "center",
+                    alignItems: "center"
                 }}>
                     COPYRIGHT© 2023 ABDULLAH TAYYAB ALL RIGHT RESERVED
                 </h5>
@@ -30,8 +36,6 @@ const Fotter = () => {
             <button
                 onClick={handleScrollToTop}
                 style={{
-                    background: "#03405B",
-                    color: "#FFFFFF",
                     position: "absolute",
                     top: -28,
                     right: 20,
@@ -39,20 +43,16 @@ const Fotter = () => {
                     outline: "none",
                     cursor: "pointer",
                     transition: "background 0.3s, color 0.3s",
-                }}
-                onMouseEnter={(e) => {
-                    e.target.style.background = "#FFFFFF";
-                    e.target.style.color = "#03405B";
-                    e.target.style.border = "1px solid #03405B"
-                }}
-                onMouseLeave={(e) => {
-                    e.target.style.background = "#03405B";
-                    e.target.style.color = "#FFFFFF";
+                    background: "rgba(255, 255, 255, 0.4)",
+                    borderRadius: "16px",
+                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    backdropFilter: "blur(5px)",
+                    border: "1px solid rgba(255, 255, 255, 0.3)"
                 }}
             >
                 <ArrowUpwardOutlinedIcon style={{ fontSize: "30px" }} />
             </button>
-        </div>
+        </div >
     )
 }
 

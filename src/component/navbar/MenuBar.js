@@ -27,7 +27,7 @@ const drawerWidth = "100%";
 
 function DrawerAppBar(props) {
 
-  const MenuList = [{ name: "Home", link: "/" }, { name: "About", link: "/about" }, { name: "Projects", link: "/project" }, { name: "Resume", link: "/resume" }, { name: "Contact", link: "/contact" }]
+  const MenuList = [{ name: "Home", link: "/" }, { name: "About", link: "/about" }, { name: "Projects", link: "/project" }, { name: "Resume", link: "/resume" }]
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);

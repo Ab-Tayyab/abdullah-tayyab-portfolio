@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="scroll-container">
       <BrowserRouter>
         {isLoading ? (
           <div className="loading-wrapper">
@@ -58,15 +58,16 @@ function App() {
               />
               <Route path="/about" element={<About />} />
               <Route path="/project" element={<AllProject />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="/resume" element={<Resume />} />
             </Routes>
             <Footer />
           </>
         )}
       </BrowserRouter>
-    </>
+    </div>
   );
+
+
 }
 
 export default App;
