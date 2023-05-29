@@ -143,7 +143,6 @@ function DrawerAppBar(props) {
                   </Link>
                 )
               })
-
             }
           </Box>
         </Toolbar>

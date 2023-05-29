@@ -1,5 +1,7 @@
 .skill-parent-heading {
     color: #03405B;
+    font-size: 35px;
+    font-weight: 800;
     text-align: center;
     padding: 30px 0px;
 }
@@ -10,6 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: sans-serif;
 }
 
 .skill-parent>div {
@@ -57,14 +60,14 @@
 }
 
 .skill-slider:hover {
-    background-color: #0E2A47;
-    color: #FFFFFF;
+    background-color: #03405B;
+    color: #97a6b4;
 }
 
 .skill-slider:hover .slider-name {
-    color: #FFFFFF;
+    color: #97a6b4;
 }
 
 .skill-slider:hover .slider-line {
-    border-color: #FFFFFF;
+    border-color: #97a6b4;
 }

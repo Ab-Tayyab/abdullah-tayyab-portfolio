@@ -14,11 +14,7 @@ const Faq = () => {
 
     return (
         <div className="accordion">
-            <h1 style={{
-                textAlign:"center",
-                paddingBottom:"10px",
-                color:"#03405B"
-            }}>Frequently Asked Question</h1>
+            <h1>Frequently Asked Question</h1>
             {faqData.map((faq, index) => (
                 <div key={index} className="accordion-item">
                     <div

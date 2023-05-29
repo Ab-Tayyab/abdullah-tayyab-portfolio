@@ -1,6 +1,6 @@
 import React from 'react'
 import './Resume.css'
-import img from '../../images/photo1.png'
+import img from '../../images/photo2.png'
 import { styled } from '@mui/material/styles';
 import { ResumeSkillData } from './ResumeSkillApi'
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';

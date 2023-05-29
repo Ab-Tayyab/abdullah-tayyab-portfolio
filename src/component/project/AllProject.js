@@ -18,7 +18,7 @@ const AllProject = () => {
     return (
         <div className='allproject-parent'>
             <h1 style={{
-                color: "#03405B",
+                color: "#97a6b4",
                 textAlign: "center",
                 padding: "20px 0px"
             }}>My Projects</h1>
@@ -28,9 +28,9 @@ const AllProject = () => {
                         return (
                             <VerticalTimelineElement onMouseEnter={handleHover} onMouseLeave={handleHover}
                                 className="vertical-timeline-element--work"
-                                contentStyle={{ background: '#03405B', color: '#fff' }}
-                                contentArrowStyle={{ borderRight: '7px solid  #03405B' }}
-                                iconStyle={{ background: '#03405B', color: '#fff' }}
+                                contentStyle={{ background: '#0E2A47', color: '#FFFFFF' }}
+                                contentArrowStyle={{ borderRight: '7px solid  #0E2A47' }}
+                                iconStyle={{ background: '#0E2A47', color: '#fff' }}
                                 icon={item.icon}
                             >
                                 <div className="card" >
@@ -39,14 +39,14 @@ const AllProject = () => {
                                         <h3 className="card-title">{item.name}</h3>
                                         <p className="card-description">{item.detail}</p>
                                         <div className='btn-parent'>
-                                                <InfoOutlinedIcon disabled style={{
+                                                <InfoOutlinedIcon style={{
                                                     fontSize: "40px",
-                                                    color: "#03405B",
+                                                    color: "#FFFFFF",
                                                 }} />
                                             <a href={item.url} target='_blank'>
                                                 <LinkOutlinedIcon style={{
                                                     fontSize: "40px",
-                                                    color: "#03405B",
+                                                    color: "#FFFFFF",
                                                 }} />
                                             </a>
                                         </div>

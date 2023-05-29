@@ -4,4 +4,12 @@
     position: relative;
     width: 100%;
     min-height: 100px;
+    padding-bottom: 10px;
+}
+
+.social-link{
+    color: #97a6b4;
+}
+.social-link:hover{
+    color: #FFFFFF;
 }

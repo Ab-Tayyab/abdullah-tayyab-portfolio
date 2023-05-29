@@ -19,6 +19,7 @@
    line-height: 5em;
    margin-top: 6px;
    font-size: 50px;
+   color: #97a6b4;
  }
 
  .close-icon{
@@ -27,8 +28,7 @@
 
  .close-icon:hover,
  .menu-icon:hover {
-  color: #03405B;
-  background-color: #FFFFFF;
+  color: #FFFFFF;
  }
 
  .main-drawer-child2-subchild1 {
@@ -57,7 +57,6 @@
  }
 
  .appbar {
-   /* background: -webkit-linear-gradient(315deg, hsla(204, 69%, 8%, 1) 0%,(rgba(0, 69, 158, 1)) 100%); */
    background: linear-gradient(90deg, rgba(84,82,82,1) 0%, rgba(14,42,71,1) 0%);
    color: #FFFFFF;
    height: 75px;

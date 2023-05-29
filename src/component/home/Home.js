@@ -1,10 +1,11 @@
 import React from 'react'
-import photo from '../../images/photo1.png'
+import photo from '../../images/photo2.png'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { Link } from 'react-router-dom';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+
 import './Home.css'
 
 const Home = () => {
@@ -29,13 +30,20 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="home-parent-child2" data-aos="fade-up"
-                data-aos-duration="3000">
-                <div className="home-parent-child2-subchild" >
-                    < h1>Hello</h1>
-                    <h3>Here's who I am & what I do</h3>
-                    <p > Hay! I am ABDULLAH TAYYAB and i'm React JS DeveloperI am confident in my ability to create visually appealing and user-friendly interfaces.</p>
-                    <p> Although I have also experience with back-end development, I am eager to learn and grow my skills in this area.</p>
+            <div>
+                <div className="home-parent-child2" data-aos="fade-up"
+                    data-aos-duration="3000">
+                    <div className="home-parent-child2-subchild" >
+                        < h1>Hello</h1>
+                        <h3>Here's who I am & what I do</h3>
+                        <p > Hay! I am ABDULLAH TAYYAB and i'm React JS DeveloperI am confident in my ability to create visually appealing and user-friendly interfaces.</p>
+                        <p> Although I have also experience with back-end development, I am eager to learn and grow my skills in this area.</p>
+                    </div>
+                </div>
+                <div className='home-contact' data-aos="zoom-in-up">
+                    <a className='social-link social-icone' href="https://wa.me/+923184579618" target="_black">
+                        Say Hello!
+                        <PhoneInTalkIcon className="contact-icone" /></a>
                 </div>
             </div>
         </div>

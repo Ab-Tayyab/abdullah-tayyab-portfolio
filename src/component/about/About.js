@@ -1,6 +1,5 @@
 import React from 'react'
-import { TypeAnimation } from 'react-type-animation';
-import photo from "../../images/photo1.png"
+import photo from "../../images/photo2.png"
 import './About.css'
 
 const About = () => {

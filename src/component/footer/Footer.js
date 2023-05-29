@@ -26,7 +26,7 @@ const Fotter = () => {
                     <a className='social-link' href="https://wa.me/+923184579618" target="_black"><WhatsAppIcon /></a>
                 </div>
                 <h5 style={{
-                    color: "white",
+                    color: "#97a6b4",
                     textAlign: "center",
                     alignItems: "center"
                 }}>
@@ -37,20 +37,21 @@ const Fotter = () => {
                 onClick={handleScrollToTop}
                 style={{
                     position: "absolute",
-                    top: -28,
+                    top: 5,
                     right: 20,
                     border: "none",
                     outline: "none",
                     cursor: "pointer",
-                    transition: "background 0.3s, color 0.3s",
-                    background: "rgba(255, 255, 255, 0.4)",
+                    color: "#97a6b4",
+                    background: "rgba(255, 255, 255, 0.2)",
                     borderRadius: "16px",
                     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
                     backdropFilter: "blur(5px)",
-                    border: "1px solid rgba(255, 255, 255, 0.3)"
                 }}
             >
-                <ArrowUpwardOutlinedIcon style={{ fontSize: "30px" }} />
+                <ArrowUpwardOutlinedIcon style={{
+                    fontSize: "30px"
+                }} />
             </button>
         </div >
     )

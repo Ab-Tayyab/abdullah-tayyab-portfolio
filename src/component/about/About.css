@@ -15,10 +15,11 @@
     display: flex;
     width: 90%;
     margin: auto;
+    border-radius: 15px;
 }
 
 .about-parent-child2>h1 {
-    font-style: italic;
+    font-size: 35px;
     padding-bottom: 10px;
     color: #97a6b4;
     font-weight: 800;

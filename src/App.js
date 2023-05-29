@@ -14,6 +14,10 @@ import Resume from './component/resume/Resume';
 
 import { InfinitySpin } from 'react-loader-spinner'
 
+import { Helmet } from 'react-helmet';
+import photo from './images/logo3.png'
+
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css'
@@ -42,6 +46,10 @@ function App() {
           </div>
         ) : (
           <>
+            <Helmet>
+              <title>Abdullah Tayyab</title>
+              <link rel="icon" href={photo} style={{ width: '32px', height: '32px' }}/>
+            </Helmet>
             <ScrollToTop />
             <DrawerAppBar />
             <Routes>
@@ -53,6 +61,7 @@ function App() {
                     <Skill />
                     <Project id="third-component" />
                     <Faq />
+                    <Contact />
                   </>
                 }
               />

@@ -18,14 +18,14 @@
 .resume-parent-child1 {
     width: 350px;
     margin: auto;
-    color: #dddada;
+    color: #97a6b4;
     padding: 20px;
     text-align: justify;
     font-family: sans-serif;
 }
 
 .resume-parent-child1 h1 {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 800;
     padding-top: 20px;
 }
@@ -52,13 +52,13 @@
 }
 
 .certificate a:hover{
-color: #FFFFFF;
+color: #97a6b4;
 }
 .resume-parent-child2 {
     max-width: 500px;
     border-top-left-radius: 60px;
     border-bottom-left-radius: 60px;
-    color: #dddada;
+    color: #97a6b4;
     padding: 20px;
     font-family: sans-serif;
     border: 1px solid#03405B;
@@ -67,18 +67,18 @@ color: #FFFFFF;
 
 
 .resume-name {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
 }
 
 .resume-job {
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .resume-parent-child2 h1 {
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 35px;
+    font-weight: 800;
 }
 
 .resume-parent-child2 h2 {
@@ -105,7 +105,7 @@ color: #FFFFFF;
 }
 
 .resume-contact>div>a {
-    color: #dddada;
+    color: #97a6b4;
     text-decoration: none;
 }
 

@@ -18,11 +18,7 @@ const Project = () => {
 
     return (
         <div className='project-parent' id='project'>
-            <h1 style={{
-                color: "#FFFFFF",
-                textAlign: "center",
-                padding: "20px 0px"
-            }}>My Projects</h1>
+            <h1>My Projects</h1>
             <VerticalTimeline >
 
                 {
@@ -39,18 +35,20 @@ const Project = () => {
                                         <img src={item.img} alt="Project 1" className="card-image" />
                                         <div className={`card-details ${isHovered ? 'show' : ''}`}>
                                             <h3 className="card-title" style={{
-                                                color: "#c4cfd9",
+                                                color: "#97a6b4",
+                                                fontSize: "25px",
+                                                fontWeight: "400",
                                             }}>{item.name}</h3>
                                             <p className="card-description">{item.detail}</p>
                                             <div className='btn-parent'>
-                                                <InfoOutlinedIcon disabled className='detail-btn' style={{
+                                                <InfoOutlinedIcon disabled style={{
                                                     fontSize: "40px",
-                                                    color: "#c4cfd9",
+                                                    color: "#97a6b4",
                                                 }} />
                                                 <a href={item.url} target='_blank'>
-                                                    <LinkOutlinedIcon className='next-btn' style={{
+                                                    <LinkOutlinedIcon style={{
                                                         fontSize: "40px",
-                                                        color: "#c4cfd9",
+                                                        color: "#97a6b4",
                                                     }} />
                                                 </a>
                                             </div>
