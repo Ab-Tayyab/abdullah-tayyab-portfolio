@@ -17,8 +17,10 @@ import { InfinitySpin } from 'react-loader-spinner';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
+import Partical from './component/loader/Partical';
 
-const  Captcha = () => {
+const Captcha = () => {
+
   const [isLoading, setIsLoading] = useState(true);
   const [showCaptcha, setShowCaptcha] = useState(false);
 
@@ -27,7 +29,7 @@ const  Captcha = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setShowCaptcha(true);
-    }, 2500);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -36,33 +38,30 @@ const  Captcha = () => {
     <div className="scroll-container">
       <BrowserRouter>
         {isLoading ? (
-          <div className="loading-wrapper">
-            <InfinitySpin width="200" color="#FFFFFF" />
-          </div>
+          <Partical />
         ) : (
-                <>
-
-                  <ScrollToTop />
-                  <DrawerAppBar />
-                  <Routes>
-                    <Route
-                      path="/"
-                      element={
-                        <>
-                          <Home />
-                          <Skill />
-                          <Project id="third-component" />
-                          <Faq />
-                          <Contact />
-                        </>
-                      }
-                    />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/project" element={<AllProject />} />
-                    <Route path="/resume" element={<Resume />} />
-                  </Routes>
-                  <Footer />
-                </>
+          <>
+            <ScrollToTop />
+            <DrawerAppBar />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Home />
+                    <Skill />
+                    <Project id="third-component" />
+                    <Faq />
+                    <Contact />
+                  </>
+                }
+              />
+              <Route path="/about" element={<About />} />
+              <Route path="/project" element={<AllProject />} />
+              <Route path="/resume" element={<Resume />} />
+            </Routes>
+            <Footer />
+          </>
         )}
       </BrowserRouter>
     </div>
