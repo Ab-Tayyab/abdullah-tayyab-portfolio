@@ -28,7 +28,8 @@ const App = () => {
         <title>Abdullah Tayyab</title>
         <link rel="icon" href={photo} style={{ width: '32px', height: '32px' }} />
       </Helmet>
-      {formSubmitted ? (
+      <Captcha />
+      {/* {formSubmitted ? (
         <Captcha />
       ) : (
         <div style={{
@@ -60,7 +61,7 @@ const App = () => {
             }}>Submit</button>
           </form>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

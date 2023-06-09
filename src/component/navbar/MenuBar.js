@@ -84,11 +84,7 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', mb: "75px", }}
-    // data-aos="fade-down"
-    // data-aos-easing="linear"
-    // data-aos-duration="1500"
-    >
+    <Box sx={{ display: 'flex', mb: "75px", }}>
       <CssBaseline />
       <AppBar className='appbar' component="nav">
         <Toolbar>
