@@ -1,8 +1,4 @@
-
-import logo from '../../images/logo2.png'
-
-
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,21 +11,58 @@ import CloseIcon from '@mui/icons-material/Close';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
-import './MenuBar.css'
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import logo from '../../images/logo2.png'
+import './MenuBar.css';
 
 const drawerWidth = "100%";
+function ElevationScroll({ children }) {
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+  });
 
-function DrawerAppBar(props) {
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
 
-  const MenuList = [{ name: "Home", link: "/" }, { name: "About", link: "/about" }, { name: "Projects", link: "/project" }, { name: "Resume", link: "/resume" }]
+function ScrollAwareAppBar({ window }) {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const { window } = props;
+  useEffect(() => {
+    let handleScroll;
+
+    if (typeof window !== 'undefined') {
+      handleScroll = () => {
+        const scrollTop = window.pageYOffset;
+
+        if (scrollTop > 0) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
+
+  const MenuList = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Projects", link: "/project" },
+    { name: "Resume", link: "/resume" }
+  ];
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -52,15 +85,22 @@ function DrawerAppBar(props) {
           {
             MenuList.map((item) => {
               return (
-                <Link to={item.link} style={{
-                  textDecoration: "none",
-                  color: "white",
-                }} onClick={handleDrawerToggle}>
+                <Link
+                  key={item.name}
+                  to={item.link}
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                  }}
+                  onClick={handleDrawerToggle}
+                >
                   <Button className='btn-active' sx={{
-                    color: "#FFFFFF",
+                    color: "#97a6b4",
+                    fontWeight: "500",
                     "&:hover": {
-                      color: "#03405B",
-                      background: "#FFFFFF"
+                      color: "#FFFFFF",
+                      borderBottom: "1px solid #FFFFFF",
+                      background: "transparent"
                     },
                   }}>
                     {item.name}
@@ -68,14 +108,21 @@ function DrawerAppBar(props) {
                 </Link>
               )
             })
-
           }
         </Box>
         <Box className="main-drawer-child2-subchild2">
-          <a className='social-link' href="https://www.facebook.com/this.abdullah.8/" target="_black"><FacebookOutlinedIcon /></a>
-          <a className='social-link' href="https://github.com/AbdullahTayyab894" target="_black"><GitHubIcon /></a>
-          <a className='social-link' href="https://www.linkedin.com/in/abdullahtayyab894/" target="_black"><LinkedInIcon /></a>
-          <a className='social-link' href="https://wa.me/+923184579618" target="_black"><WhatsAppIcon /></a>
+          <a className='social-link' href="https://www.facebook.com/this.abdullah.8/" target="_blank" rel="noopener noreferrer">
+            <FacebookOutlinedIcon />
+          </a>
+          <a className='social-link' href="https://github.com/AbdullahTayyab894" target="_blank" rel="noopener noreferrer">
+            <GitHubIcon />
+          </a>
+          <a className='social-link' href="https://www.linkedin.com/in/abdullahtayyab894/" target="_blank" rel="noopener noreferrer">
+            <LinkedInIcon />
+          </a>
+          <a className='social-link' href="https://wa.me/+923184579618" target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon />
+          </a>
         </Box>
       </Box>
     </Box>
@@ -84,65 +131,79 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', mb: "75px", }}>
+    <Box sx={{ display: 'flex', mb: "75px" }}>
       <CssBaseline />
-      <AppBar className='appbar' component="nav">
-        <Toolbar>
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            flexGrow: 1,
-          }}>
-            <Link to="/" style={{
-              textDecoration: "none",
-              color: "white",
+      <ElevationScroll>
+        <AppBar
+          className='appbar'
+          component="nav"
+          sx={{ boxShadow: isScrolled ? 'rgba(0, 0, 0, 0.12) 0px 3px 8px' : '' }}
+        >
+          <Toolbar>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+              flexGrow: 1,
             }}>
-              <img src={logo} alt="Logo" style={{ marginRight: '10px', width: "150px" }} />
-            </Link>
-          </Box>
+              <Link to="/" style={{
+                textDecoration: "none",
+                color: "white",
+              }}>
+                <img src={logo} alt="Logo" style={{ marginRight: '10px', width: "150px" }} />
+              </Link>
+            </Box>
 
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            sx={{
-              mr: 0, display: { sm: 'none' },
-              lineHeight: "3em",
-            }}
-          >
-            <MenuIcon className='menu-icon'
-              onClick={handleDrawerToggle} />
-          </IconButton>
+            <IconButton
+              aria-label="open drawer"
+              edge="start"
+              sx={{
+                mr: 0,
+                display: { sm: 'none' },
+                lineHeight: "3em",
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                },
+              }}
+              onClick={handleDrawerToggle}
+            >
+              <MenuIcon className='menu-icon' />
+            </IconButton>
 
-          <Box sx={{
-            display: { xs: 'none', sm: 'block' },
-            justifyContent: "space-between",
-          }}>
-
-            {
-              MenuList.map((item) => {
-                return (
-                  <Link to={item.link} style={{
-                    textDecoration: "none",
-                    color: "white",
-                  }} >
-                    <Button className='btn-active' sx={{
-                      color: "#FFFFFF",
-                      "&:hover": {
-                        color: "#03405B",
-                        background: "#FFFFFF"
-                      },
-                    }}>
-                      {item.name}
-                    </Button>
-                  </Link>
-                )
-              })
-            }
-          </Box>
-        </Toolbar>
-      </AppBar>
+            <Box sx={{
+              display: { xs: 'none', sm: 'block' },
+              justifyContent: "space-between",
+            }}>
+              {
+                MenuList.map((item) => {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.link}
+                      style={{
+                        textDecoration: "none",
+                        color: "white",
+                      }}
+                    >
+                      <Button className='btn-active' sx={{
+                         color: "#97a6b4",
+                         fontWeight: "500",
+                         "&:hover": {
+                           color: "#FFFFFF",
+                           borderBottom: "1px solid #FFFFFF",
+                           background: "transparent"
+                         },
+                      }}>
+                        {item.name}
+                      </Button>
+                    </Link>
+                  )
+                })
+              }
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </ElevationScroll>
       <Box component="nav">
         <Drawer
           container={container}
@@ -164,8 +225,8 @@ function DrawerAppBar(props) {
   );
 }
 
-DrawerAppBar.propTypes = {
+ScrollAwareAppBar.propTypes = {
   window: PropTypes.func,
 };
 
-export default DrawerAppBar;
+export default ScrollAwareAppBar;

@@ -5,16 +5,12 @@ import Home from './component/home/Home';
 import About from './component/about/About';
 import Footer from './component/footer/Footer';
 import Skill from './component/skill/Skill';
-// import Project from './component/project/Project';
-import TabbedLayout from './component/project/ProjectTabs';
+import Project from './component/project/Project';
 import AllProject from './component/project/AllProject';
 import Contact from './component/contact/Contact';
 import ScrollToTop from './component/ScrollTop';
 import Faq from './component/faqs/Faq';
 import Resume from './component/resume/Resume';
-
-// import { InfinitySpin } from 'react-loader-spinner';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -51,8 +47,7 @@ const Captcha = () => {
                   <>
                     <Home />
                     <Skill />
-                    {/* <Project id="third-component" /> */}
-                    <TabbedLayout />
+                    <Project id="third-component" />
                     <Faq />
                     <Contact />
                   </>
