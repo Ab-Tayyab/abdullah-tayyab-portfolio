@@ -9,7 +9,7 @@ const Form = () => {
 
 
     return (
-        <div className="contact-container">
+        <div className="contact-container" id="contact">
             <div className='contact-child'>
                 <h1>Contact Me</h1>
                 <h2>Let's make something amazing together.

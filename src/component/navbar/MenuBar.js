@@ -82,33 +82,139 @@ function ScrollAwareAppBar({ window }) {
         marginTop: "60px",
       }}>
         <Box className="main-drawer-child2-subchild1">
-          {
-            MenuList.map((item) => {
-              return (
-                <Link
-                  key={item.name}
-                  to={item.link}
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                  }}
-                  onClick={handleDrawerToggle}
-                >
-                  <Button className='btn-active' sx={{
-                    color: "#97a6b4",
-                    fontWeight: "500",
-                    "&:hover": {
-                      color: "#FFFFFF",
-                      borderBottom: "1px solid #FFFFFF",
-                      background: "transparent"
-                    },
-                  }}>
-                    {item.name}
-                  </Button>
-                </Link>
-              )
-            })
-          }
+          <a onClick={handleDrawerToggle}
+            href="#home"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <Button className='btn-active' sx={{
+              color: "#97a6b4",
+              fontWeight: "500",
+              "&:hover": {
+                color: "#FFFFFF",
+                borderBottom: "1px solid #FFFFFF",
+                background: "transparent"
+              },
+            }}>
+              Home
+            </Button>
+          </a>
+          <a onClick={handleDrawerToggle}
+            href="#about"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <Button className='btn-active' sx={{
+              color: "#97a6b4",
+              fontWeight: "500",
+              "&:hover": {
+                color: "#FFFFFF",
+                borderBottom: "1px solid #FFFFFF",
+                background: "transparent"
+              },
+            }}>
+              About
+            </Button>
+          </a>
+          <a onClick={handleDrawerToggle}
+            href="#skill"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <Button className='btn-active' sx={{
+              color: "#97a6b4",
+              fontWeight: "500",
+              "&:hover": {
+                color: "#FFFFFF",
+                borderBottom: "1px solid #FFFFFF",
+                background: "transparent"
+              },
+            }}>
+              Skill
+            </Button>
+          </a>
+          <a onClick={handleDrawerToggle}
+            href="#project"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <Button className='btn-active' sx={{
+              color: "#97a6b4",
+              fontWeight: "500",
+              "&:hover": {
+                color: "#FFFFFF",
+                borderBottom: "1px solid #FFFFFF",
+                background: "transparent"
+              },
+            }}>
+              Project
+            </Button>
+          </a>
+          <a onClick={handleDrawerToggle}
+            href="#resume"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <Button className='btn-active' sx={{
+              color: "#97a6b4",
+              fontWeight: "500",
+              "&:hover": {
+                color: "#FFFFFF",
+                borderBottom: "1px solid #FFFFFF",
+                background: "transparent"
+              },
+            }}>
+              Resume
+            </Button>
+          </a>
+          <a onClick={handleDrawerToggle}
+            href="#faq"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <Button className='btn-active' sx={{
+              color: "#97a6b4",
+              fontWeight: "500",
+              "&:hover": {
+                color: "#FFFFFF",
+                borderBottom: "1px solid #FFFFFF",
+                background: "transparent"
+              },
+            }}>
+              Faq
+            </Button>
+          </a>
+          <a onClick={handleDrawerToggle}
+            href="#contact"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <Button className='btn-active' sx={{
+              color: "#97a6b4",
+              fontWeight: "500",
+              "&:hover": {
+                color: "#FFFFFF",
+                borderBottom: "1px solid #FFFFFF",
+                background: "transparent"
+              },
+            }}>
+              Contact
+            </Button>
+          </a>
         </Box>
         <Box className="main-drawer-child2-subchild2">
           <a className='social-link' href="https://www.facebook.com/this.abdullah.8/" target="_blank" rel="noopener noreferrer">
@@ -174,32 +280,139 @@ function ScrollAwareAppBar({ window }) {
               display: { xs: 'none', sm: 'block' },
               justifyContent: "space-between",
             }}>
-              {
-                MenuList.map((item) => {
-                  return (
-                    <Link
-                      key={item.name}
-                      to={item.link}
-                      style={{
-                        textDecoration: "none",
-                        color: "white",
-                      }}
-                    >
-                      <Button className='btn-active' sx={{
-                         color: "#97a6b4",
-                         fontWeight: "500",
-                         "&:hover": {
-                           color: "#FFFFFF",
-                           borderBottom: "1px solid #FFFFFF",
-                           background: "transparent"
-                         },
-                      }}>
-                        {item.name}
-                      </Button>
-                    </Link>
-                  )
-                })
-              }
+              <a
+                href="#home"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <Button className='btn-active' sx={{
+                  color: "#97a6b4",
+                  fontWeight: "500",
+                  "&:hover": {
+                    color: "#FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
+                    background: "transparent"
+                  },
+                }}>
+                  Home
+                </Button>
+              </a>
+              <a
+                href="#about"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <Button className='btn-active' sx={{
+                  color: "#97a6b4",
+                  fontWeight: "500",
+                  "&:hover": {
+                    color: "#FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
+                    background: "transparent"
+                  },
+                }}>
+                  About
+                </Button>
+              </a>
+              <a
+                href="#skill"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <Button className='btn-active' sx={{
+                  color: "#97a6b4",
+                  fontWeight: "500",
+                  "&:hover": {
+                    color: "#FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
+                    background: "transparent"
+                  },
+                }}>
+                  Skill
+                </Button>
+              </a>
+              <a
+                href="#project"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <Button className='btn-active' sx={{
+                  color: "#97a6b4",
+                  fontWeight: "500",
+                  "&:hover": {
+                    color: "#FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
+                    background: "transparent"
+                  },
+                }}>
+                  Project
+                </Button>
+              </a>
+              <a
+                href="#resume"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <Button className='btn-active' sx={{
+                  color: "#97a6b4",
+                  fontWeight: "500",
+                  "&:hover": {
+                    color: "#FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
+                    background: "transparent"
+                  },
+                }}>
+                  Resume
+                </Button>
+              </a>
+              <a
+                href="#faq"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <Button className='btn-active' sx={{
+                  color: "#97a6b4",
+                  fontWeight: "500",
+                  "&:hover": {
+                    color: "#FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
+                    background: "transparent"
+                  },
+                }}>
+                  Faq
+                </Button>
+              </a>
+              <a
+                href="#contact"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <Button className='btn-active' sx={{
+                  color: "#97a6b4",
+                  fontWeight: "500",
+                  "&:hover": {
+                    color: "#FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
+                    background: "transparent"
+                  },
+                }}>
+                  Contact
+                </Button>
+              </a>
             </Box>
           </Toolbar>
         </AppBar>

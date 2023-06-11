@@ -26,7 +26,7 @@ const Captcha = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setShowCaptcha(true);
-    }, 4000);
+    }, 0);
 
     return () => clearTimeout(timer);
   }, []);
@@ -46,16 +46,15 @@ const Captcha = () => {
                 element={
                   <>
                     <Home />
+                    <About />
                     <Skill />
                     <Project id="third-component" />
+                    <Resume />
                     <Faq />
                     <Contact />
                   </>
                 }
               />
-              <Route path="/about" element={<About />} />
-              <Route path="/project" element={<AllProject />} />
-              <Route path="/resume" element={<Resume />} />
             </Routes>
             <Footer />
           </>

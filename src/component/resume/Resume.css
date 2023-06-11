@@ -1,4 +1,7 @@
-
+.resume{
+    background-color: #0e2a47;
+    padding: 10px;
+}
 .resume-parent {
     max-width: 900px;
     margin: auto;
@@ -156,9 +159,4 @@ color: #97a6b4;
     .resume-parent-child1 {
         width: 300px;
     }
-}
-
-.resume{
-    background-color: #0e2a47;
-
 }

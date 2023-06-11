@@ -24,7 +24,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 const Resume = () => {
   return (
-    <div className='resume'>
+    <div className='resume' id="resume">
       <div className='resume-parent'>
         <div className='resume-parent-child1'>
           <div>

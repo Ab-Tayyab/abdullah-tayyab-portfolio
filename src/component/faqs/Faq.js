@@ -13,7 +13,7 @@ const Faq = () => {
     };
 
     return (
-        <div className="accordion">
+        <div className="accordion" id="faq">
             <h1>Frequently Asked Question</h1>
             {faqData.map((faq, index) => (
                 <div key={index} className="accordion-item">

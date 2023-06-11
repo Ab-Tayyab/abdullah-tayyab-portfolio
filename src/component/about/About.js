@@ -1,21 +1,65 @@
 import React from 'react'
-import photo from "../../images/photo2.png"
+import CountUp from 'react-countup';
+import { Button } from '@mui/material';
 import './About.css'
 
 const About = () => {
+
+    const onDownloadResume = () => {
+        const link = document.createElement("a");
+        link.href = './abdullah tayyab resume.pdf';
+        link.click();
+    };
+    const onDownloadCoverLetter = () => {
+        const link = document.createElement("a");
+        link.href = './abdullah tayyab cover letter.pdf';
+        link.click();
+    }
     return (
-        <>
-            <div className='about-parent'>
+        <div id="about">
+            <h1 className='about-heading'>Know Me More</h1>
+            <div className='about-parent' >
                 <div className='about-parent-child1'>
-                    <img src={photo} alt="Personal Photo" />
+                    <h1 className='about-name'>I'm <span>Abdullah Tayyab</span>, a Web Developer</h1>
+                    <p className='detail'>I'm a MERN stack developer with six months of experience in front-end web development. I am skilled in HTML, CSS, JavaScript, React, npm libraries, and GitHub. I have worked with front-end frameworks like Bootstrap and MUI to create visually appealing and user-friendly interfaces. I have integrated APIs and third-party libraries into my projects to enhance functionality. Although my back-end development experience is limited, I have a basic understanding of web development principles, including working with databases like MongoDB and server-side languages like Node.js. I am a self-motivated individual with strong communication skills, capable of working both independently and collaboratively with teams and clients. I am dedicated to continuous learning and keeping up with the latest trends and technologies in front-end and back-end web development.</p>
                 </div>
                 <div className='about-parent-child2'>
-                    <h1 >About Me</h1>
-                    <p className='detail'> Hay! I am ABDULLAH TAYYAB and i'm Mern Stack Developer  with six months of experience in front-end web development, I am confident in my ability to create visually appealing and user-friendly interfaces. Although I have limited experience with back-end development, I am eager to learn and grow my skills in this area.During my time as a Front End Web Developer, I have gained hands-on experience with HTML, CSS, JavaScript, react, npm libraries and git-hub and various front-end frameworks such as Bootstrap, MUI. I am responsible for building responsive and \ninteractive user interfaces that provide an exceptional user experience. I have also used APIs and integrated third-party libraries into my projects.While my experience with back-end development is limited, I have a basic understanding of web development principles, and I have worked with databases such as MongoDB. I am familiar with server-side languages such as Node.js and I have experience working with APIs and JSON data.I am self-motivated, and I enjoy working independently. I have excellent communication skills, and I am able to work effectively with teams and  clients. I am committed to continuous learning and staying up-to-date with the latest trends and technologies in  both front-end and back-end web development. </p>
+                    <div>
+                        <h2 className='about-child2-name'><span>Name:</span>Abdullah Tayyab</h2>
+                        <h2 className='about-child2-email'><span>Email:</span>abdullahtayyab894@gmail.com</h2>
+                        <div className='about-skill'>
+                            <div>
+                                <h2 className='about-child2-skill'>  <span>Skills:</span> </h2>
+                            </div>
+                            <div className='about-skill-child'>
+                                <span>HTML</span> <span>CSS</span> <span>JavaScript</span> <span>React JS</span> <span>Npm Libraries</span> <span>MUI</span> <span>BootStrap</span> <span>Git & GitHub</span>
+                            </div>
+                        </div>
+                        <div className='about-experience'>
+                            <div>
+                                <h2>
+                                    <CountUp end={6} duration={1} />+
+                                </h2>
+                                <h3>Months of Experiences</h3>
+                            </div>
+                            <div>
+                                <h2>
+                                    <CountUp end={10} duration={1} />+
+                                </h2>
+                                <h3>Projects Completed</h3>
+                            </div>
+                        </div>
+                        <div className='about-btn'>
+                            <button className='about-btn1' onClick={onDownloadResume}>Resume
+                            </button>
+                            <button className='about-btn2' onClick={onDownloadCoverLetter}>Cover Letter
+                            </button>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

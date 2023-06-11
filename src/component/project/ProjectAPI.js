@@ -1,12 +1,11 @@
 import s1 from '../../images/E1.png'
-import s2 from '../../images/C1.jpg'
 import s3 from '../../images/N1.png'
 import s4 from '../../images/S1.jpg'
 import s5 from '../../images/Q1.png'
 import s6 from '../../images/W1.png'
-import s7 from '../../images/C2.jpg'
+import s7 from '../../images/C2.png'
 import s8 from '../../images/T1.png'
-import s9 from '../../images/G1.jpg'
+import s9 from '../../images/G1.png'
 
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
@@ -16,7 +15,6 @@ import QuizOutlinedIcon from '@mui/icons-material/QuizOutlined';
 import AccessAlarmOutlinedIcon from '@mui/icons-material/AccessAlarmOutlined';
 import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
 import AnimationOutlinedIcon from '@mui/icons-material/AnimationOutlined';
-import CoronavirusOutlinedIcon from '@mui/icons-material/CoronavirusOutlined';
 
 export const projectdata = [
     {
@@ -82,13 +80,5 @@ export const projectdata = [
         icon: <AnimationOutlinedIcon />,
         url: "https://netflix-animation.netlify.app/",
         detail: "Netflix is a subscription-based streaming service that allows our members to watch TV shows and movies on an internet-connected device."
-    },
-    {
-        id: 9,
-        name: "Covid-19 App",
-        img: s2,
-        icon: <CoronavirusOutlinedIcon />,
-        url: "https://reactjs-covid-19-app.netlify.app/",
-        detail: "COVID-19 apps include mobile-software applications for digital contact-tracing - i.e. the process of identifying persons who may have been in contact with an infected individual - deployed during the COVID-19 pandemic."
     },
 ]
