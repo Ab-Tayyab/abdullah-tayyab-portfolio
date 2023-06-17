@@ -17,6 +17,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import logo from '../../images/logo2.png'
+import bg from '../../images/bg1.jpg'
+
 import './MenuBar.css';
 
 const drawerWidth = "100%";
@@ -237,14 +239,12 @@ function ScrollAwareAppBar({ window }) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', mb: "75px" }}>
+    <Box sx={{ display: 'flex', mb: "75px" }} >
       <CssBaseline />
       <ElevationScroll>
         <AppBar
           className='appbar'
-          component="nav"
-          sx={{ boxShadow: isScrolled ? 'rgba(0, 0, 0, 0.12) 0px 3px 8px' : '' }}
-        >
+          component="nav">
           <Toolbar>
             <Box sx={{
               display: 'flex',

@@ -6,7 +6,6 @@ import About from './component/about/About';
 import Footer from './component/footer/Footer';
 import Skill from './component/skill/Skill';
 import Project from './component/project/Project';
-import AllProject from './component/project/AllProject';
 import Contact from './component/contact/Contact';
 import ScrollToTop from './component/ScrollTop';
 import Faq from './component/faqs/Faq';
@@ -14,7 +13,6 @@ import Resume from './component/resume/Resume';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
-import Partical from './component/loader/Partical';
 
 const Captcha = () => {
 
@@ -26,7 +24,7 @@ const Captcha = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setShowCaptcha(true);
-    }, 0);
+    }, 3200);
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,7 +33,15 @@ const Captcha = () => {
     <div className="scroll-container">
       <BrowserRouter>
         {isLoading ? (
-          <Partical />
+          <ul className="loader" >
+            <li style={{ '--i': 1 }}>W</li>
+            <li style={{ '--i': 2 }}>E</li>
+            <li style={{ '--i': 3 }}>L</li>
+            <li style={{ '--i': 4 }}>C</li>
+            <li style={{ '--i': 5 }}>O</li>
+            <li style={{ '--i': 6 }}>M</li>
+            <li style={{ '--i': 7 }}>E</li>
+          </ul>
         ) : (
           <>
             <ScrollToTop />
@@ -48,7 +54,7 @@ const Captcha = () => {
                     <Home />
                     <About />
                     <Skill />
-                    <Project id="third-component" />
+                    <Project />
                     <Resume />
                     <Faq />
                     <Contact />
