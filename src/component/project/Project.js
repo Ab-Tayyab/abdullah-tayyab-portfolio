@@ -19,26 +19,28 @@ const Project = () => {
                 {
                     projectdata.map((item) => {
                         return (
-                                <div className="project-child" data-aos="flip-down"
-                                data-aos-duration="3000">
-                                    <img src={item.img} alt="item view" className='project-img' width="100%" height="250px" />
-                                    <div className="project-overlay">
-                                        <div className="project-text" >
-                                            <h1 color="white">
-                                                {item.name}
-                                            </h1>
-                                            <p>{item.detail}</p>
-                                            <div>
-                                                <a href={item.url} target='_blank'>
-                                                    <LinkOutlinedIcon style={{
-                                                        fontSize: "40px",
-                                                        color: "#97a6b4",
-                                                    }} />
-                                                </a>
-                                            </div>
+                            <div className="project-child"
+                                data-aos="zoom-in-up"
+                                data-aos-duration="3000"
+                            >
+                                <img src={item.img} alt="item view" className='project-img' width="100%" height="250px" />
+                                <div className="project-overlay">
+                                    <div className="project-text" >
+                                        <h1 color="white">
+                                            {item.name}
+                                        </h1>
+                                        <p>{item.detail}</p>
+                                        <div>
+                                            <a href={item.url} target='_blank'>
+                                                <LinkOutlinedIcon style={{
+                                                    fontSize: "40px",
+                                                    color: "#97a6b4",
+                                                }} />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         )
                     })
                 }

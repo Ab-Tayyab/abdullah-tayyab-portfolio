@@ -1,49 +1,4 @@
 
-.allproject-parent {
-    background-color: #FFFFFF;
-    padding: 10px;
-}
-
-.allcard-details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 16px;
-    color: #FFFFFF;
-    opacity: 0;
-    transition: opacity 0.3s;
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.card:hover .allcard-details {
-    opacity: 1;
-}
-
-.allcard-details.show {
-    opacity: 1;
-}
-
-.card-title {
-    color: #FFFFFF;
-}
-
-@media (max-width:428px) {
-    .card-image {
-        height: 290px;
-    }
-}
-
-@media (max-width:370px) {
-    .card-image {
-        height: 380px;
-    }
-}
-
 .project-main{
     margin-top: 20px;
 }

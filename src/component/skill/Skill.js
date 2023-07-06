@@ -13,9 +13,10 @@ const Skill = () => {
                         {
                             SkillApi.map((item) => {
                                 return (
-                                    <div className='skill-slider skill-slider-clr' key={item.id} data-aos="flip-left"
+                                    <div className='skill-slider skill-slider-clr' key={item.id} 
+                                    data-aos="zoom-in"
                                         data-aos-easing="ease-out-cubic"
-                                        data-aos-duration="2000">
+                                        data-aos-duration="1000">
                                         <img className='slider-img' src={item.img} alt="Skill Image" />
                                         <h1 className='slider-name skill-slider-clr'>
                                             {item.name}

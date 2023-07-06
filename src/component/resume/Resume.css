@@ -151,12 +151,17 @@ color: #97a6b4;
 
 @media (max-width:530px) {
     .resume-parent-child1 {
-        width: 400px;
+        width: 300px;
     }
 }
 
-@media (max-width:530px) {
+@media (max-width:370px) {
     .resume-parent-child1 {
-        width: 300px;
+        width: 280px;
+        padding-left: 0px;
+    }
+    .resume-parent-child2 {
+        width: 280px;
+        padding-left: 0px;
     }
 }

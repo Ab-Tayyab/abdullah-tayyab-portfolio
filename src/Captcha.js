@@ -13,7 +13,6 @@ import Resume from './component/resume/Resume';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
-
 const Captcha = () => {
 
   const [isLoading, setIsLoading] = useState(true);

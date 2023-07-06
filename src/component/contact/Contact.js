@@ -18,10 +18,10 @@ const Form = () => {
                     Just wanted to say hi, request my resume, or discuss the potential for an incredible partnership. Looking forward to hearing from you!
                 </h2>
                 <div className='contact-link'>
-                    <a className='social-link' href="https://www.facebook.com/this.abdullah.8/" target="_black"><FacebookOutlinedIcon /></a>
-                    <a className='social-link' href="https://github.com/AbdullahTayyab894" target="_black"><GitHubIcon /></a>
-                    <a className='social-link' href="https://www.linkedin.com/in/abdullahtayyab894/" target="_black"><LinkedInIcon /></a>
-                    <a className='social-link' href="https://wa.me/+923184579618" target="_black"><WhatsAppIcon /></a>
+                    <a className='social-link' href="https://www.facebook.com/this.abdullah.8/" target="_black" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500"><FacebookOutlinedIcon /></a>
+                    <a className='social-link' href="https://github.com/AbdullahTayyab894" target="_black" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000"><GitHubIcon /></a>
+                    <a className='social-link' href="https://www.linkedin.com/in/abdullahtayyab894/" target="_black" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1500"><LinkedInIcon /></a>
+                    <a className='social-link' href="https://wa.me/+923184579618" target="_black" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="2000"><WhatsAppIcon /></a>
                 </div>
             </div>
         </div>

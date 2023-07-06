@@ -1,68 +1,150 @@
-.main-drawer {
-  position: relative;
-  text-align: center;
-  color: white;
-  height: 100%;
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar,
+.navbar-burger,
+.menu,
+.background {
+  position: fixed;
+}
+
+
+.background {
+  z-index: 1;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  transition: 0.5s;
   background-color: #0e2a47;
 }
 
-.main-drawer-child1 {
-  position: absolute;
+.open .background {
+  filter: blur(20px);
+}
+
+.navbar {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  padding-left: 20px;
+  padding-right: 72px;
+  background: #0e2a47;
+  color: #f9f9f9;
+}
+
+.navbar>button {
+  font-size: 28px;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: 140px;
+}
+
+.navbar-burger {
+  z-index: 3;
+  top: 0;
   right: 0;
-  margin-right: 20px;
-  height: 70px;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  background-image: url("../../images/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.close-icon,
-.menu-icon {
-  line-height: 5em;
-  margin-top: 6px;
-  font-size: 50px;
-  color: #97a6b4;
+.open .navbar-burger {
+  background-image: url("../../images//close.svg");
 }
 
-.close-icon {
-  margin-top: 20px;
+.menu {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #0e2a47;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(66, 66, 66, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-in;
+  text-align: left;
 }
 
-.close-icon:hover,
-.menu-icon:hover {
-  color: #FFFFFF;
+.open .menu {
+  opacity: 1;
+  visibility: visible;
 }
 
-.main-drawer-child2-subchild1 {
-  text-align: center;
+.menu>a {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Euclid Circular A";
+  text-decoration: none;
   width: 100px;
   margin: auto;
-  line-height: 3em;
-  font-size: 20px;
 }
 
-.main-drawer-child2-subchild2 {
-  padding-top: 20px;
+
+.social-icon {
+  width: 200px;
   display: flex;
-  justify-content: space-around;
-  width: 300px;
+  justify-content: space-between;
   margin: auto;
 }
+.open .menu>a {
+  animation: appear 0.5s both;
+}
 
-.social-link {
-  color: white;
+.open .social-icon>a {
+  animation: appearicon 0.5s both;
+}
+
+.social-icon>a {
+  color: #f9f9f9;
   font-size: 40px;
 }
 
-.social-link:hover {
-  color: #03405B;
+.social-icon>a:hover {
+  color: #ffffff;
 }
 
-.appbar {
-  background-color: #0e2a47 !important;
-  color: #FFFFFF;
-  height: 75px;
-  padding-top: 5px;
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, -100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
-.appbar img {
-  display: flex;
-  flex-grow: 1;
+@keyframes appearicon {
+  0% {
+    opacity: 0;
+    transform: translate(100%, -100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
