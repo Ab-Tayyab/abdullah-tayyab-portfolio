@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import DrawerAppBar from './component/navbar/MenuBar';
 import Home from './component/home/Home';
 import About from './component/about/About';
 import Footer from './component/footer/Footer';
@@ -13,6 +12,7 @@ import Resume from './component/resume/Resume';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
+import Navbar from './component/navbar/Navbar';
 const Captcha = () => {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -44,7 +44,7 @@ const Captcha = () => {
         ) : (
           <>
             <ScrollToTop />
-            <DrawerAppBar />
+            <Navbar />
             <Routes>
               <Route
                 path="/"

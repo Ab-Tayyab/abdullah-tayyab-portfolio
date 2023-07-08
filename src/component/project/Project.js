@@ -2,15 +2,9 @@ import React, { useState } from 'react';
 import './Project.css';
 import { projectdata } from './ProjectAPI'
 import LinkOutlinedIcon from '@mui/icons-material/LinkOutlined';
-import { Link } from 'react-router-dom';
 
 
 const Project = () => {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleHover = () => {
-        setIsHovered(!isHovered);
-    };
 
     return (
         <div className='project-main' >
@@ -45,11 +39,6 @@ const Project = () => {
                     })
                 }
             </div>
-            <Link to="/project" style={{
-                textDecoration: "none",
-            }}>
-                <button className='show-btn'>Show More</button>
-            </Link>
         </div>
     );
 };
