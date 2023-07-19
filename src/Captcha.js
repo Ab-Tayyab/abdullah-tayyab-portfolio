@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './component/home/Home';
+import Navbar from './component/navbar/Navbar';
+import Home from './component/home/Home'
 import About from './component/about/About';
 import Footer from './component/footer/Footer';
 import Skill from './component/skill/Skill';
 import Project from './component/project/Project';
 import Contact from './component/contact/Contact';
-import ScrollToTop from './component/ScrollTop';
 import Faq from './component/faqs/Faq';
 import Resume from './component/resume/Resume';
+
+import ScrollToTop from './component/ScrollTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
-import Navbar from './component/navbar/Navbar';
+
 const Captcha = () => {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +25,7 @@ const Captcha = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setShowCaptcha(true);
-    }, 3200);
+    }, 0);
 
     return () => clearTimeout(timer);
   }, []);
@@ -50,11 +52,11 @@ const Captcha = () => {
                 path="/"
                 element={
                   <>
-                    <Home />
+                  <Home />
                     <About />
                     <Skill />
                     <Project />
-                    <Resume />
+                    {/* <Resume /> */}
                     <Faq />
                     <Contact />
                   </>
