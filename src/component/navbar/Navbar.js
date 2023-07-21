@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../images/logo2.png'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -28,28 +28,32 @@ const Navbar = () => {
       <header className={isScrolled ? 'scrolled' : ''}>
         <div className="navbar">
           <div className="logo">
-            <img src={logo} />
+            <a href="#">
+              <img src={logo} />
+            </a>
           </div>
           <ul className="links">
             <li>
-              <a href="#home">Home</a>
+              <a href="#home" className='nav-link'>Home</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" className='nav-link'>About</a>
             </li>
             <li>
-              <a href="#skill">Skill</a>
+              <a href="#skill" className='nav-link'>Skill</a>
             </li>
             <li>
-              <a href="#project">Project</a>
+              <a href="#project" className='nav-link'>Project</a>
             </li>
             <li>
-              <a href="#faq">Faq</a>
+              <a href="#faq" className='nav-link'>Faq</a>
             </li>
           </ul>
-          <a href="#contact" className="action_btn">
-            Contact
-          </a>
+          <li className="action_btn">
+            <a href="https://mail.google.com/mail/u/1/#inbox?compose=new" target="_blank">
+              Contact
+            </a>
+          </li>
           <div className="toggle_btn" onClick={handleToggle}>
             <h6>{isOpen ? <CloseIcon /> : <MenuIcon />}</h6>
           </div>
@@ -57,22 +61,22 @@ const Navbar = () => {
         <div>
           <ul className={`dropdown_menu ${isOpen ? 'open' : 'close'}`}>
             <li onClick={handleToggle}>
-              <a href="#home">Home</a>
+              <a href="#home" className='drop-link'>Home</a>
             </li>
             <li onClick={handleToggle}>
-              <a href="#about">About</a>
+              <a href="#about" className='drop-link'>About</a>
             </li>
             <li onClick={handleToggle}>
-              <a href="#skill">Skill</a>
+              <a href="#skill" className='drop-link'>Skill</a>
             </li>
             <li onClick={handleToggle}>
-              <a href="#project">Project</a>
+              <a href="#project" className='drop-link'>Project</a>
             </li>
             <li onClick={handleToggle}>
-              <a href="#faq">Faq</a>
+              <a href="#faq" className='drop-link'>Faq</a>
             </li>
             <li className="action_btn" onClick={handleToggle}>
-              <a href="#contact">Contact</a>
+              <a href="https://mail.google.com/mail/u/1/#inbox?compose=new" target='_blank'>Contact</a>
             </li>
           </ul>
         </div>

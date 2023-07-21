@@ -8,8 +8,6 @@ import Skill from './component/skill/Skill';
 import Project from './component/project/Project';
 import Contact from './component/contact/Contact';
 import Faq from './component/faqs/Faq';
-import Resume from './component/resume/Resume';
-
 import ScrollToTop from './component/ScrollTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -56,7 +54,6 @@ const Captcha = () => {
                     <About />
                     <Skill />
                     <Project />
-                    {/* <Resume /> */}
                     <Faq />
                     <Contact />
                   </>
