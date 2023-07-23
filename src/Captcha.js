@@ -50,7 +50,7 @@ const Captcha = () => {
                 path="/"
                 element={
                   <>
-                  <Home />
+                    <Home />
                     <About />
                     <Skill />
                     <Project />

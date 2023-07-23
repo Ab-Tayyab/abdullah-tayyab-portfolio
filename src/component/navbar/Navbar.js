@@ -50,7 +50,7 @@ const Navbar = () => {
             </li>
           </ul>
           <li className="action_btn">
-            <a href="https://mail.google.com/mail/u/1/#inbox?compose=new" target="_blank">
+            <a href="#contact" >
               Contact
             </a>
           </li>
@@ -76,7 +76,7 @@ const Navbar = () => {
               <a href="#faq" className='drop-link'>Faq</a>
             </li>
             <li className="action_btn" onClick={handleToggle}>
-              <a href="https://mail.google.com/mail/u/1/#inbox?compose=new" target='_blank'>Contact</a>
+              <a href="#contact" >Contact</a>
             </li>
           </ul>
         </div>
