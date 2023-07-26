@@ -23,7 +23,7 @@ const Captcha = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setShowCaptcha(true);
-    }, 0);
+    }, 3200);
 
     return () => clearTimeout(timer);
   }, []);
