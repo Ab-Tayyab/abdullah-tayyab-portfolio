@@ -15,6 +15,7 @@ li {
   border-top: 1px solid #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
   padding: 10px 0px;
+  transition: 0.5s ease;
 }
 
 .drop-link:hover {
@@ -22,6 +23,7 @@ li {
   border-left: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
   padding: 0px 10px;
+  transition: 0.5s ease;
 }
 
 header {
@@ -67,6 +69,7 @@ header.scrolled {
 
 .navbar .toggle_btn:hover{
   color: #FFFFFF;
+  transition: 0.5s ease;
 }
 
 .action_btn>a {
@@ -76,6 +79,7 @@ header.scrolled {
 
 .action_btn>a:hover {
   color: #FFFFFF;
+  transition: 0.5s ease;
 }
 
 .action_btn {
@@ -101,33 +105,31 @@ header.scrolled {
 .action_btn:hover {
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
+  transition: 0.5s ease;
 }
-
 .dropdown_menu {
   background-color: #0e2a47;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   display: none;
   width: 0;
-  height: 0;
+  height: 100vh;
   backdrop-filter: blur(15px);
   overflow: hidden;
   position: absolute;
   top: 80px;
-  right: 0;
-  transition: width 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  right: -100%;
+  transition: width 1s linear, right 1s linear;
   line-height: 3em;
-  transform: translateX(100%);
+  border-left: 10px double #97a6b4;
 }
 
 .dropdown_menu.open {
   width: 100%;
-  height: 100vh;
-  transform: translateX(0);
+  right: 0;
 }
+
+
 
 .dropdown_menu li {
   padding: 1rem;

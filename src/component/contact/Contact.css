@@ -46,6 +46,7 @@ h1 {
 
 .contact-link>a:hover {
   color: #0e2a47;
+  transition: 1s ease;
 }
 
 .contact-form {
@@ -66,12 +67,14 @@ h1 {
   border-radius: 5px;
   color: #97a6b4;
 }
+
 .contact-form>input::placeholder,
-.contact-form>textarea::placeholder{
+.contact-form>textarea::placeholder {
   color: #97a6b4;
   font-size: 18px;
   font-weight: 400;
 }
+
 .contact-form>input:focus,
 .contact-form>textarea:focus {
   border-left: 2px solid #97a6b4;
@@ -97,5 +100,6 @@ h1 {
   border: none;
   color: #97a6b4;
   background-color: #0e2a47;
-  transition: 0.5s ease-in-out;
+  transition: 1s ease;
+
 }

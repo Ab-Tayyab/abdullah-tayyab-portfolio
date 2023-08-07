@@ -118,8 +118,9 @@
 .about-btn1:hover,
 .about-btn2:hover {
     background-color: #0e2a47;
-    border: 1px solid #97a6b4;
+    /* border: 1px solid #97a6b4; */
     color: #97a6b4;
+  transition: 1s ease;
 }
 
 @media (max-width:579px) {
