@@ -55,29 +55,32 @@ const Navbar = () => {
             </a>
           </li>
           <div className="toggle_btn" onClick={handleToggle}>
-            <h6>{isOpen ? <CloseIcon /> : <MenuIcon />}</h6>
+            <h6><MenuIcon /></h6>
           </div>
         </div>
         <div>
           <ul className={`dropdown_menu ${isOpen ? 'open' : 'close'}`}>
-            <li onClick={handleToggle}>
-              <a href="#home" className='drop-link'>Home</a>
-            </li>
-            <li onClick={handleToggle}>
-              <a href="#about" className='drop-link'>About</a>
-            </li>
-            <li onClick={handleToggle}>
-              <a href="#skill" className='drop-link'>Skill</a>
-            </li>
-            <li onClick={handleToggle}>
-              <a href="#project" className='drop-link'>Project</a>
-            </li>
-            <li onClick={handleToggle}>
-              <a href="#faq" className='drop-link'>Faq</a>
-            </li>
-            <li className="action_btn" onClick={handleToggle}>
-              <a href="#contact" >Contact</a>
-            </li>
+            <div className="menu-close" onClick={handleToggle}>
+              <h6><CloseIcon sx={{ color: "#FFFFFF" }} className='close-icon' /></h6>
+            </div>
+              <li onClick={handleToggle}>
+                <a href="#home" className='drop-link'>Home</a>
+              </li>
+              <li onClick={handleToggle}>
+                <a href="#about" className='drop-link'>About</a>
+              </li>
+              <li onClick={handleToggle}>
+                <a href="#skill" className='drop-link'>Skill</a>
+              </li>
+              <li onClick={handleToggle}>
+                <a href="#project" className='drop-link'>Project</a>
+              </li>
+              <li onClick={handleToggle}>
+                <a href="#faq" className='drop-link'>Faq</a>
+              </li>
+              <li className="action_btn" onClick={handleToggle}>
+                <a href="#contact" >Contact</a>
+              </li>
           </ul>
         </div>
       </header>
