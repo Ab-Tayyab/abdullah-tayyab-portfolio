@@ -6,7 +6,7 @@ const Fotter = () => {
         <div className='footer' >
             <div >
                 <h5>
-                    COPYRIGHT© 2023 <span>ABDULLAH TAYYAB</span> ALL RIGHT RESERVED
+                    COPYRIGHT© 2024 <span>ABDULLAH TAYYAB</span> ALL RIGHT RESERVED
                 </h5>
             </div>
         </div >

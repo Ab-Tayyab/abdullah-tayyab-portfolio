@@ -17,14 +17,14 @@ import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
 import AnimationOutlinedIcon from '@mui/icons-material/AnimationOutlined';
 
 export const projectdata = [
-    {
-        id: 1,
-        name: "Shopping Store",
-        img: s4,
-        icon: <ShoppingBagOutlinedIcon />,
-        url: "https://shopping-store-reactjs.netlify.app/",
-        detail: "Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app."
-    },
+    // {
+    //     id: 1,
+    //     name: "Shopping Store",
+    //     img: s4,
+    //     icon: <ShoppingBagOutlinedIcon />,
+    //     url: "https://shopping-store-reactjs.netlify.app/",
+    //     detail: "Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app."
+    // },
     {
         id: 2,
         name: "Expense Tracker App",
@@ -41,14 +41,14 @@ export const projectdata = [
         url: "https://reactjs-any-do-list.netlify.app/",
         detail: "A list of errands and other tasks – often written on a piece of paper as a memory aid – that one needs or intends to accomplish."
     },
-    {
-        id: 4,
-        name: "Gym site",
-        img: s9,
-        icon: <FitnessCenterOutlinedIcon />,
-        url: "https://gym-site-using-reactjs.netlify.app/",
-        detail: " Fitness Class Schedule and Bookings. Your gym website is where members will view your fitness class schedule, make a booking, and find out what services you offer. A great fitness website example is F45 Training. It has a clean and minimalist design with compelling messaging."
-    },
+    // {
+    //     id: 4,
+    //     name: "Gym site",
+    //     img: s9,
+    //     icon: <FitnessCenterOutlinedIcon />,
+    //     url: "https://gym-site-using-reactjs.netlify.app/",
+    //     detail: " Fitness Class Schedule and Bookings. Your gym website is where members will view your fitness class schedule, make a booking, and find out what services you offer. A great fitness website example is F45 Training. It has a clean and minimalist design with compelling messaging."
+    // },
     {
         id: 5,
         name: "Quiz App",
@@ -73,12 +73,12 @@ export const projectdata = [
         url: "https://simple-reactjs-calculator.netlify.app/",
         detail: "Calculator provides simple and advanced mathematical functions in a beautifully designed app. • Perform basic calculations such as addition, subtraction, multiplication, and division."
     },
-    {
-        id: 8,
-        name: "Tiny Animation Site",
-        img: s3,
-        icon: <AnimationOutlinedIcon />,
-        url: "https://netflix-animation.netlify.app/",
-        detail: "Netflix is a subscription-based streaming service that allows our members to watch TV shows and movies on an internet-connected device."
-    },
+    // {
+    //     id: 8,
+    //     name: "Tiny Animation Site",
+    //     img: s3,
+    //     icon: <AnimationOutlinedIcon />,
+    //     url: "https://netflix-animation.netlify.app/",
+    //     detail: "Netflix is a subscription-based streaming service that allows our members to watch TV shows and movies on an internet-connected device."
+    // },
 ]

@@ -26,9 +26,9 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const serviceID = 'service_zk39sco';
-        const templateID = 'template_wgr3opo';
-        const userID = 'sVlkjJcttwrP5tAQZ';
+        const serviceID = 'service_4vqv20g';
+        const templateID = 'template_5rkr70p';
+        const userID = 'f7sR6cOIBQETYiAk1';
 
         const form = e.target;
 
