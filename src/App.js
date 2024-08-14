@@ -1,26 +1,29 @@
-
-import React, { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import Captcha from './Captcha';
+import React, { useEffect, useState } from 'react';
+import Navbar from './component/navbar/Navbar';
+import Home from './component/home/Home'
+import About from './component/about/About';
+import Skill from './component/skill/Skill';
+import Project from './component/project/Project';
+import Faq from './component/faqs/Faq';
+import Contact from './component/contact/Contact';
+import Footer from './component/footer/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './App.css';
 import { Helmet } from 'react-helmet';
 import photo from './images/logo3.png';
 
 const App = () => {
-  const [captchaValue, setCaptchaValue] = useState('');
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (captchaValue) {
-      setFormSubmitted(true);
-    } else {
-      alert('Please complete the CAPTCHA.');
-    }
-  };
+  useEffect(() => {
+    AOS.init();
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
 
-  const handleCaptchaChange = (value) => {
-    setCaptchaValue(value);
-  };
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div>
@@ -28,40 +31,30 @@ const App = () => {
         <title>Abdullah Tayyab</title>
         <link rel="icon" href={photo} style={{ width: '32px', height: '32px' }} />
       </Helmet>
-      <Captcha />
-      {/* {formSubmitted ? (
-        <Captcha />
-      ) : (
-        <div style={{
-          width: "100%",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}>
-          <form onSubmit={handleSubmit} >
-            <div>
-              <ReCAPTCHA
-                sitekey="6Lcm3WUmAAAAAG1ySpT6-kWwlyvcUXY5H_Rg8Txr"
-                onChange={handleCaptchaChange}
-              />
-            </div>
-            <button type="submit" style={{
-              width: "150px",
-              height: "50px",
-              border: "none",
-              background: "rgba(14, 42, 71, 1)",
-              color: "white",
-              marginTop: "10px",
-              "&:hover": {
-                color: "black",
-                background: "white"
-              }
-
-            }}>Submit</button>
-          </form>
-        </div>
-      )} */}
+      <div className="scroll-container">
+        {isLoading ? (
+          <ul className="loader" >
+            <li style={{ '--i': 1 }}>W</li>
+            <li style={{ '--i': 2 }}>E</li>
+            <li style={{ '--i': 3 }}>L</li>
+            <li style={{ '--i': 4 }}>C</li>
+            <li style={{ '--i': 5 }}>O</li>
+            <li style={{ '--i': 6 }}>M</li>
+            <li style={{ '--i': 7 }}>E</li>
+          </ul>
+        ) : (
+          <>
+            <Navbar />
+            <Home />
+            <About />
+            <Skill />
+            <Project />
+            <Faq />
+            <Contact />
+            <Footer />
+          </>
+        )}
+      </div>
     </div>
   );
 };
