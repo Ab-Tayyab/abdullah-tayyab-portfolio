@@ -1,4 +1,5 @@
 import s1 from '../../images/E1.png'
+import s2 from '../../images/i1.png'
 import s4 from '../../images/S1.png'
 import s5 from '../../images/Q1.png'
 import s6 from '../../images/W1.png'
@@ -14,6 +15,13 @@ export const projectdata = [
         url: "https://coffeee-shoop.vercel.app/",
         detail: "A sleek, user-friendly coffee shop website featuring an intuitive reservation system, responsive design, and a visually appealing layout with seamless navigation, showcasing menu items and services with modern aesthetics."
     },
+    {
+        id:2,
+        name: "Internee.Pk",
+        img :s2,
+        url: "https://internee-pk-redesign.vercel.app/",
+        detail:"Internship task to redesign Internee.PK website using react."
+    }
     {
         id: 2,
         name: "Expense Tracker App",
