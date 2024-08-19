@@ -21,7 +21,7 @@ export const projectdata = [
         img :s2,
         url: "https://internee-pk-redesign.vercel.app/",
         detail:"Internship task to redesign Internee.PK website using react."
-    }
+    },
     {
         id: 2,
         name: "Expense Tracker App",
