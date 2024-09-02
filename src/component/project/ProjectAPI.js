@@ -13,7 +13,7 @@ export const projectdata = [
     id: 1,
     name: "Coffee Shop",
     img: s4,
-    url: "https://coffeee-shoop.vercel.app/",
+    url: "https://coffee-shoop.vercel.app/",
     detail:
       "A sleek, user-friendly coffee shop website featuring an intuitive reservation system, responsive design, and a visually appealing layout with seamless navigation, showcasing menu items and services with modern aesthetics.",
   },
