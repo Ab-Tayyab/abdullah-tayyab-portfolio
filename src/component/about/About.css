@@ -1,147 +1,260 @@
+.about-container {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav button.active {
+  font-weight: bold;
+  color: black;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 70vh;
+}
+
+.section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  transition: left 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.about-container .about.show {
+  left: 0;
+  opacity: 1;
+}
+
+.about-container .expertise.show {
+  left: 0;
+  opacity: 1;
+}
+
+.about-container .about.hide {
+  left: -100%;
+  opacity: 0;
+}
+
+.about-container .expertise.hide {
+  left: 100%;
+  opacity: 0;
+}
+
+.about-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20;
+  padding: 20px;
+}
+.about-main div {
+  max-width: 600px;
+}
+
 .about-heading {
-    padding-top: 20px;
-    font-family: sans-serif;
-    font-weight: 800;
+  padding-top: 20px;
+  font-family: sans-serif;
+  font-weight: 800;
 }
-
 .about-name {
-    font-size: 35px;
-    padding-bottom: 10px;
-    color: #97a6b4;
-    font-weight: 400;
+  font-size: 35px;
+  padding-bottom: 10px;
+  color: #97a6b4;
+  font-weight: 400;
 }
 
-.about-name>span {
-    color: #0e2a47;
-    font-weight: 800;
+.about-name > span {
+  color: #0e2a47;
+  font-weight: 800;
 }
-
-
-.about-parent {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.about-parent-child1,
-.about-parent-child2 {
-    width: 600px;
-    padding: 20px;
-}
-
 .detail {
-    letter-spacing: 2px;
-    word-spacing: 1px;
-    line-height: 1.7em;
-    display: flex;
-    justify-content: space-around;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    color: #97a6b4;
-    font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  line-height: 1.7em;
+  display: flex;
+  justify-content: space-around;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  color: #97a6b4;
+  font-weight: 400;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.experties-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.experties-main > div {
+  max-width: 600px;
 }
 
 .about-child2-name,
 .about-child2-email,
 .about-child2-skill {
-    color: #97a6b4;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 10px;
+  color: #97a6b4;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px;
 }
 
-.about-child2-name>span,
-.about-child2-email>span,
-.about-child2-skill>span {
-    font-size: 20px;
-    font-weight: 800;
-    padding-right: 20px;
+.about-child2-name > span,
+.about-child2-email > span,
+.about-child2-skill > span {
+  font-size: 20px;
+  font-weight: 800;
+  padding-right: 20px;
 }
 
-.about-skill {
-    display: flex;
-    justify-content: space-around;
-}
-
-.about-skill-child>span {
-    padding: 5px 10px;
-    background-color: #97a6b4;
-    color: #0e2a47;
-    border-radius: 5px;
-    line-height: 2.5em;
-    font-size: 12px;
-
+.about-skill-child > span {
+  padding: 5px 10px;
+  background-color: #97a6b4;
+  color: #0e2a47;
+  border-radius: 5px;
+  line-height: 2.5em;
+  font-size: 12px;
 }
 
 .about-experience {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .about-experience h2 {
-    font-size: 30px;
-    font-family: sans-serif;
-    font-weight: 800;
-    color: #0e2a47;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: #0e2a47;
 }
 
 .about-experience h3 {
-    font-size: 25px;
-    font-family: sans-serif;
-    font-weight: 400;
-    color: #97a6b4;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #97a6b4;
 }
 
 .about-btn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .about-btn1,
 .about-btn2 {
-    width: 250px;
-    height: 50px;
-    margin: auto;
-    margin-top: 10px;
-    background-color: #97a6b4;
-    color: #0e2a47;
-    border: none;
-    border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #97a6b4;
+  color: #0e2a47;
+  border: none;
+  border-radius: 5px;
 }
 
 .about-btn1:hover,
 .about-btn2:hover {
-    background-color: #0e2a47;
-    color: #97a6b4;
+  background-color: #0e2a47;
+  color: #97a6b4;
   transition: 1s ease;
 }
 
-@media (max-width:579px) {
-
-    .about-btn1,
-    .about-btn2 {
-        width: 270px;
-    }
+/* Skill bar */
+.skill-bars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-@media (max-width:400px) {
+.skill-bar {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px; 
+}
 
-    .about-child2-name,
-    .about-child2-email,
-    .about-child2-skill {
-        font-size: 12px;
-    }
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: #0e2a47;
+}
 
-    .about-child2-name>span,
-    .about-child2-email>span,
-    .about-child2-skill>span {
-        font-size: 17px;
-    }
+.bar {
+  height: 10px;
+  background-color: #ffffff;
+  border: 1px solid #0e2a47;
+  border-radius: 5px;
+  position: relative;
+}
 
+.fill {
+  background-color: #0e2a47;
+  height: 100%;
+  border-radius: 5px;
+}
+
+@media (max-width:768px) {
+  .content{
+  overflow: auto;
+  }
+}
+@media (max-width: 579px) {
+  .about-btn1,
+  .about-btn2 {
+    width: 270px;
+  }
+
+  .about-main {
+    flex-direction: column-reverse;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .about-child2-name,
+  .about-child2-email,
+  .about-child2-skill {
+    font-size: 12px;
+  }
+
+  .about-child2-name > span,
+  .about-child2-email > span,
+  .about-child2-skill > span {
+    font-size: 17px;
+  }
 }
