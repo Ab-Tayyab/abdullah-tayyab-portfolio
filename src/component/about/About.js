@@ -31,7 +31,7 @@ const About = () => {
     { name: "Git & GitHub", level: 70 },
   ];
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <h1 className="about-heading">Know Me More</h1>
       <div className="about-nav">
         <button
