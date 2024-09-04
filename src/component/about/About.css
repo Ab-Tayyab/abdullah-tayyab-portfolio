@@ -1,68 +1,72 @@
 .about-container {
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  height: 100%;
-}
-
-.nav {
-  display: flex;
-  justify-content: right;
-  margin-bottom: 20px;
-}
-
-.nav button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  margin: 0 10px;
-  cursor: pointer;
-  padding: 10px;
-  transition: color 0.3s;
-}
-
-.nav button.active {
-  font-weight: bold;
-  color: black;
-}
-
-.content {
-  position: relative;
   width: 100%;
   overflow: hidden;
-  min-height: 70vh;
 }
 
-.section {
-  position: absolute;
+.about-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  gap: 20px;
+}
+
+.about-nav button {
+  background-color: transparent;
+  color: #0e2a47;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.about-nav button:hover {
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.about-nav button.active {
+  border-bottom: 2.5px solid #0e2a47;
+}
+
+.about-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-animation {
   width: 100%;
-  top: 0;
-  left: 100%;
-  transition: left 0.5s ease-in-out;
-  opacity: 0;
+  padding: 20px;
 }
 
-.about-container .about.show {
-  left: 0;
-  opacity: 1;
+/* Slide animation */
+.slide-animation.about {
+  animation: slideLeft 0.5s ease-in-out;
 }
 
-.about-container .expertise.show {
-  left: 0;
-  opacity: 1;
+.slide-animation.experiences {
+  animation: slideRight 0.5s ease-in-out;
 }
 
-.about-container .about.hide {
-  left: -100%;
-  opacity: 0;
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.about-container .expertise.hide {
-  left: 100%;
-  opacity: 0;
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.about-main {
+.about {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -70,7 +74,7 @@
   gap: 20;
   padding: 20px;
 }
-.about-main div {
+.about div {
   max-width: 600px;
 }
 
@@ -78,6 +82,7 @@
   padding-top: 20px;
   font-family: sans-serif;
   font-weight: 800;
+  color: #0e2a47;
 }
 .about-name {
   font-size: 35px;
@@ -107,33 +112,35 @@
   height: auto;
   border-radius: 20px;
 }
-.experties-main {
+.experiences {
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px; 
+  gap: 20px;
 }
 
-.experties-main > div {
+.experiences > div {
   max-width: 600px;
 }
 
-.about-child2-name,
-.about-child2-email,
-.about-child2-skill {
-  color: #97a6b4;
-  font-weight: 400;
-  font-size: 16px;
-  padding: 10px;
+.p-experience h1 {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 800;
+  color: #0e2a47;
 }
 
-.about-child2-name > span,
-.about-child2-email > span,
-.about-child2-skill > span {
+.p-experience h2 {
   font-size: 20px;
-  font-weight: 800;
-  padding-right: 20px;
+  font-weight: 600;
+  color: #97a6b4;
+}
+
+.p-experience p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #0e2a47;
 }
 
 .about-skill-child > span {
@@ -149,51 +156,51 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: space-between;
 }
 
 .about-experience h2 {
   font-size: 30px;
   font-family: sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #0e2a47;
+  text-align: center;
 }
 
 .about-experience h3 {
-  font-size: 25px;
+  font-size: 22px;
   font-family: sans-serif;
   font-weight: 400;
-  color: #97a6b4;
+  color: #0e2a47;
 }
 
 .about-btn {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 20px;
+  gap: 20px;
 }
 
 .about-btn1,
 .about-btn2 {
-  width: 250px;
-  height: 50px;
+  width: 100%;
+  height: 40px;
   margin: auto;
+  box-sizing: border-box;
   margin-top: 10px;
-  background-color: #97a6b4;
-  color: #0e2a47;
+  background-color: #0e2a47;
+  color: #97a6b4;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .about-btn1:hover,
 .about-btn2:hover {
-  background-color: #0e2a47;
-  color: #97a6b4;
-  transition: 1s ease;
+  background-color: #97a6b4;
+  color: #0e2a47;
+  transition: 0.5s ease;
 }
 
-/* Skill bar */
 .skill-bars {
   display: flex;
   flex-wrap: wrap;
@@ -204,7 +211,7 @@
   border-radius: 5px;
   padding: 10px;
   width: 100%;
-  max-width: 500px; 
+  max-width: 500px;
 }
 
 .skill-info {
@@ -212,12 +219,14 @@
   justify-content: space-between;
   margin-bottom: 5px;
   color: #0e2a47;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .bar {
   height: 10px;
-  background-color: #ffffff;
-  border: 1px solid #0e2a47;
+  background-color: #97a6b4;
+  border: 1px solid #97a6b4;
   border-radius: 5px;
   position: relative;
 }
@@ -228,33 +237,18 @@
   border-radius: 5px;
 }
 
-@media (max-width:768px) {
-  .content{
-  overflow: auto;
+@media (max-width: 768px) {
+  .about-nav {
+    justify-content: space-around;
   }
-}
-@media (max-width: 579px) {
-  .about-btn1,
-  .about-btn2 {
-    width: 270px;
-  }
-
-  .about-main {
-    flex-direction: column-reverse;
+  .about-experience div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-}
-
-@media (max-width: 400px) {
-  .about-child2-name,
-  .about-child2-email,
-  .about-child2-skill {
-    font-size: 12px;
-  }
-
-  .about-child2-name > span,
-  .about-child2-email > span,
-  .about-child2-skill > span {
-    font-size: 17px;
+  .about-experience>div>h3{
+    padding-left: 40px;
+    text-align: left;
   }
 }

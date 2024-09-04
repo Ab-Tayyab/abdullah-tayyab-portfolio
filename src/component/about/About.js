@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./About.css";
 import img from "../../images/photo2.png";
 
-function About() {
+const About = () => {
   const [activeSection, setActiveSection] = useState("about");
 
-  const handleToggle = (section) => {
+  const handleSectionClick = (section) => {
     setActiveSection(section);
   };
 
@@ -30,32 +30,26 @@ function About() {
     { name: "Bootstrap", level: 60 },
     { name: "Git & GitHub", level: 70 },
   ];
-
   return (
     <div className="about-container">
       <h1 className="about-heading">Know Me More</h1>
-      <div className="nav">
+      <div className="about-nav">
         <button
-          onClick={() => handleToggle("about")}
+          onClick={() => handleSectionClick("about")}
           className={activeSection === "about" ? "active" : ""}
         >
-          ABOUT
+          About
         </button>
         <button
-          onClick={() => handleToggle("expertise")}
-          className={activeSection === "expertise" ? "active" : ""}
+          onClick={() => handleSectionClick("experiences")}
+          className={activeSection === "experiences" ? "active" : ""}
         >
-          EXPERTISE
+          Experiences
         </button>
       </div>
-
-      <div className={`content ${activeSection}`}>
-        <div
-          className={`section about ${
-            activeSection === "about" ? "show" : "hide"
-          }`}
-        >
-          <div className="about-main">
+      <div className="about-content">
+        {activeSection === "about" && (
+          <div className="slide-animation about">
             <div>
               <h1 className="about-name">
                 I'm <span>Abdullah Tayyab</span>, a Web Developer
@@ -82,20 +76,35 @@ function About() {
               <img src={img} alt="Personal Photo" className="about-img" />
             </div>
           </div>
-        </div>
-        <div
-          className={`section expertise ${
-            activeSection === "expertise" ? "show" : "hide"
-          }`}
-        >
-          <div className="experties-main">
+        )}
+        {activeSection === "experiences" && (
+          <div className="slide-animation experiences">
             <div>
-              <h2 className="about-child2-name">
-                <span>Name:</span>Abdullah Tayyab
-              </h2>
-              <h2 className="about-child2-email">
-                <span>Email:</span>abdullahtayyab894@gmail.com
-              </h2>
+              <div className="p-experience">
+                <h1>React JS InternShip</h1>
+                <h2>Gamica Cloud Mar 22 - Dec 22</h2>
+                <p>
+                  My experience at Gamica Cloud has allowed me to develop my
+                  skills as a React-JS developer and to work on a variety of
+                  exciting projects which is mentioned in project section.
+                </p>
+              </div>
+              <div className="p-experience">
+                <h1>Mern Stack BootCamp</h1>
+                <h2>TechLift, PASHA & PSEB Jan 23 - Mar 23</h2>
+                <p>
+                  Create an Ecommerce Site using React-JS, Redux & Bootstrap and
+                  also create backend using Node JS with Express-JS and MongoDB
+                </p>
+              </div>
+              <div className="p-experience">
+                <h1>React JS InternShip</h1>
+                <h2>Internee.PK AUG 24 - SEP 24</h2>
+                <p>
+                  Create an multiple Site using React-JS, Redux, firebase and
+                  restfull API.
+                </p>
+              </div>
 
               <div className="about-experience">
                 <div>
@@ -125,7 +134,7 @@ function About() {
                   <div
                     className="skill-bar"
                     key={skill.name}
-                    style={{ maxWidth: "500px" }} // Set maximum width for each bar
+                    style={{ maxWidth: "500px" }}
                   >
                     <div className="skill-info">
                       <span>{skill.name}</span>
@@ -135,7 +144,7 @@ function About() {
                       <div
                         className="fill"
                         style={{
-                          width: `${skill.level}%`, // Correct usage of template literals
+                          width: `${skill.level}%`,
                         }}
                       ></div>
                     </div>
@@ -144,10 +153,10 @@ function About() {
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default About;

@@ -53,7 +53,7 @@ const Home = () => {
               </a>
               <a
                 className="social"
-                href="https://github.com/AbdullahTayyab894"
+                href="https://github.com/Ab-Tayyab"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="zoom-in-up"
@@ -64,7 +64,7 @@ const Home = () => {
               </a>
               <a
                 className="social"
-                href="https://www.linkedin.com/in/abdullahtayyab894/"
+                href="https://www.linkedin.com/in/abdullah--tayyab/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="zoom-in-up"
@@ -75,7 +75,7 @@ const Home = () => {
               </a>
               <a
                 className="social"
-                href="https://wa.me/+923184579618"
+                href="https://wa.me/+923085630574"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="zoom-in-up"
