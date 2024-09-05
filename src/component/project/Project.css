@@ -3,6 +3,11 @@
     margin-top: 20px;
     padding-bottom: 20px;
 }
+
+.project-main>h1{
+    color: #0E2A47;
+    font-weight: 800;
+}
 .project-parent {
     display: flex;
     flex-wrap: wrap;

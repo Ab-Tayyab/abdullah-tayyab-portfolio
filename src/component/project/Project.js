@@ -7,8 +7,8 @@ import LinkOutlinedIcon from '@mui/icons-material/LinkOutlined';
 const Project = () => {
 
     return (
-        <div className='project-main' >
-            <h1 id='project'>My Projects</h1>
+        <div className='project-main' id='project' >
+            <h1>My Projects</h1>
             <div className='project-parent'>
                 {
                     projectdata.map((item) => {

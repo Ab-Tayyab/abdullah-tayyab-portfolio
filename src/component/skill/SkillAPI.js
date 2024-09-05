@@ -15,61 +15,74 @@ export const SkillApi = [
     {
         id:1,
         img:html,
-        name:"HTML5"
+        name:"HTML5",
+        time: 500
     },
     {
         id:2,
         img:css,
-        name:"CSS3"
+        name:"CSS3",
+        time:1000
     },
     {
         id:3,
         img:js,
-        name:"JavaScript"
+        name:"JavaScript",
+        time:1500
     },
     {
         id:4,
         img:react,
-        name:"React"
+        name:"React",
+        time:2000
     },
     {
         id:5,
         img:mui,
-        name:"MUI"
+        name:"MUI",
+        time:2500
     },
     {
         id:6,
         img:bs,
-        name:"BootStrap"
+        name:"BootStrap",
+        time:3000
     },
     {
         id:7,
         img:git,
-        name:"Git"
+        name:"Git",
+        time:3500
     },
     {
         id:8,
         img:vs,
-        name:"VS Code"
+        name:"VS Code",
+        time:4000
+
     },
     {
         id:9,
         img:npm,
-        name:"npm Libraries"
+        name:"npm Libraries",
+        time:4500
     },
     {
         id:10,
         img:nodejs,
-        name:"Node JS"
+        name:"Node JS",
+        time:5000
     },
     {
         id:11,
         img:express,
-        name:"Express JS"
+        name:"Express JS",
+        time:5500
     },
     {
         id:12,
         img:mongodb,
-        name:"MongoDB"
+        name:"MongoDB",
+        time:6000
     },
 ]

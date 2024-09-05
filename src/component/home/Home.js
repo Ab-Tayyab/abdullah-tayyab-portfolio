@@ -13,13 +13,7 @@ const Home = () => {
       <div className="home-parent-child1">
         <div className="home-parent-child1-subchild">
           <div className="home-parent-child1-subchild1">
-            <img
-              src={photo}
-              alt="Background"
-              data-aos="fade-down"
-              data-aos-easing="linear"
-              data-aos-duration="3000"
-            />
+            <img className="img-animation" src={photo} />
           </div>
         </div>
       </div>
@@ -45,7 +39,7 @@ const Home = () => {
                 href="https://www.facebook.com/this.abdullah.8/"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-aos="zoom-in-up"
+                data-aos="fade-left"
                 data-aos-easing="linear"
                 data-aos-duration="500"
               >
@@ -56,7 +50,7 @@ const Home = () => {
                 href="https://github.com/Ab-Tayyab"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-aos="zoom-in-up"
+                data-aos="fade-left"
                 data-aos-easing="linear"
                 data-aos-duration="1000"
               >
@@ -67,7 +61,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/abdullah--tayyab/"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-aos="zoom-in-up"
+                data-aos="fade-left"
                 data-aos-easing="linear"
                 data-aos-duration="1500"
               >
@@ -78,7 +72,7 @@ const Home = () => {
                 href="https://wa.me/+923085630574"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-aos="zoom-in-up"
+                data-aos="fade-left"
                 data-aos-easing="linear"
                 data-aos-duration="2000"
               >
@@ -87,11 +81,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div
-          className="home-contact"
-          data-aos="fade-up"
-          data-aos-duration="3000"
-        >
+        <div className="home-contact img-animation">
           <a
             className="social-link social-icone"
             href="https://wa.me/+923085630574"
