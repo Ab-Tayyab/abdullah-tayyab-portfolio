@@ -17,7 +17,7 @@ const Skill = () => {
                                     data-aos="zoom-in"
                                         data-aos-easing="ease-out-cubic"
                                         data-aos-duration={item.time}>
-                                        <img className='slider-img' src={item.img} alt="Skill Image" />
+                                        <img className='slider-img' src={item.img} alt="Skill Showcase" />
                                         <h1 className='slider-name skill-slider-clr'>
                                             {item.name}
                                             <div className='slider-line skill-slider-clr' >

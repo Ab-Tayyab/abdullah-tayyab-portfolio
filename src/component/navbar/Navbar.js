@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../images/logo2.png";
+import ScrollToTop from "../topScrolling/scrolling";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,16 +9,6 @@ const Navbar = () => {
 
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const handleMenuItemClick = (event, targetId) => {
-    event.preventDefault();
-    setMenuOpen(false);
-
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   const handleScroll = () => {
@@ -38,14 +29,12 @@ const Navbar = () => {
     link.click();
   };
   return (
-    <div className={`navbar-container ${isScrolled ? "scrolled" : ""}`}>
-      <nav className="navbar">
+    <nav className={`navbar-container ${isScrolled ? "scrolled" : ""}`}>
+      <div className="navbar">
         <div className="navbar-logo">
-          <h1>
-            <a href="/">
-              <img src={logo} alt="Portfolio Logo" />
-            </a>
-          </h1>
+          <a href="/">
+            <img src={logo} alt="Portfolio Logo" />
+          </a>
         </div>
         <div className={`navbar-menu all-menu ${menuOpen ? "open" : ""}`}>
           <ul>
@@ -67,10 +56,10 @@ const Navbar = () => {
             <li className="action_btn" onClick={handleToggle}>
               <a href="#contact">Contact</a>
             </li>
-            <li className="action_btn text-animation" onClick={onDownloadResume}>
-              <a >Resume</a>
+            <button className="resume-btn" onClick={onDownloadResume}>
+              Reasume
               <i class="fa fa-download"></i>
-            </li>
+            </button>
           </ul>
         </div>
         <div
@@ -82,7 +71,7 @@ const Navbar = () => {
           <div className="btn2 all-btn"></div>
           <div className="btn3 all-btn"></div>
         </div>
-      </nav>
+      </div>
       <div
         id="mobileMenu"
         className={`mobile-menu all-menu ${menuOpen ? "open" : ""}`}
@@ -106,13 +95,14 @@ const Navbar = () => {
           <li onClick={handleToggle}>
             <a href="#contact">Contact</a>
           </li>
-          <li className="text-animation" onClick={onDownloadResume}>
-          <a >Resume</a>
-          <i class="fa fa-download"></i>
-          </li>
+          <button className="resume-btn" onClick={onDownloadResume}>
+            Reasume
+            <i class="fa fa-download"></i>
+          </button>
         </ul>
       </div>
-    </div>
+      <ScrollToTop />
+    </nav>
   );
 };
 

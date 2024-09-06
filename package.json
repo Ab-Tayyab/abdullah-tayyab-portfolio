@@ -9,6 +9,7 @@
     "@mui/icons-material": "^5.14.1",
     "@mui/material": "^5.14.2",
     "@testing-library/jest-dom": "^5.16.5",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "eslint-config-react-app": "^7.0.1",

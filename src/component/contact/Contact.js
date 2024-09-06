@@ -48,90 +48,91 @@ const Form = () => {
   };
 
   return (
-    <div className="contact-container" id="contact">
-      <div className="contact-child">
-        <h1>Contact Info</h1>
-        <h2>Let's make something amazing together.</h2>
-        <h2>
-          Just wanted to say hi, request my resume, or discuss the potential for
-          an incredible partnership. Looking forward to hearing from you!
-        </h2>
-        <div className="contact-link">
-          <a
-            className="social-link"
-            href="https://www.facebook.com/this.abdullah.8/"
-            target="_black"
-            data-aos="zoom-in-up"
-            data-aos-easing="linear"
-            data-aos-duration="500"
-          >
-            <FacebookOutlinedIcon />
-          </a>
-          <a
-            className="social-link"
-            href="https://github.com/Ab-Tayyab"
-            target="_black"
-            data-aos="zoom-in-up"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            className="social-link"
-            href="https://www.linkedin.com/in/abdullah--tayyab/"
-            target="_black"
-            data-aos="zoom-in-up"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
-          >
-            <LinkedInIcon />
-          </a>
-          <a
-            className="social-link"
-            href="https://wa.me/+923085630574"
-            target="_black"
-            data-aos="zoom-in-up"
-            data-aos-easing="linear"
-            data-aos-duration="2000"
-          >
-            <WhatsAppIcon />
-          </a>
+    <div className="contact" id="contact">
+      <h1>Contact Me</h1>
+      <div className="contact-container">
+        <div className="contact-child1">
+          <h2>Let's make something amazing together.</h2>
+          <h2>
+            Just wanted to say hi, request my resume, or discuss the potential
+            for an incredible partnership. Looking forward to hearing from you!
+          </h2>
+          <div className="contact-link">
+            <a
+              className="social-link"
+              href="https://www.facebook.com/this.abdullah.8/"
+              target="_black"
+              data-aos="zoom-in-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
+              <FacebookOutlinedIcon />
+            </a>
+            <a
+              className="social-link"
+              href="https://github.com/Ab-Tayyab"
+              target="_black"
+              data-aos="zoom-in-up"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              className="social-link"
+              href="https://www.linkedin.com/in/abdullah--tayyab/"
+              target="_black"
+              data-aos="zoom-in-up"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              className="social-link"
+              href="https://wa.me/+923085630574"
+              target="_black"
+              data-aos="zoom-in-up"
+              data-aos-easing="linear"
+              data-aos-duration="2000"
+            >
+              <WhatsAppIcon />
+            </a>
+          </div>
         </div>
+        <div className="contact-child2">
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <input
+              placeholder="Enter Your Name"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              placeholder="Enter your Email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              />
+            <textarea
+              placeholder="Type Your Message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              />
+              <p>
+                Fill out the form below and i will try to get back to you within 24h
+              </p>
+            <button type="submit">Send a Message</button>
+          </form>
+        </div>
+        <ToastContainer />
       </div>
-      <div>
-        <h1>How can i help you</h1>
-        <p>
-          Fill out the form below and i will try to get back to you within 24h
-        </p>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <input
-            placeholder="Enter Your Name"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            placeholder="Enter your Email"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            placeholder="Type Your Message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit">Send a Message</button>
-        </form>
-      </div>
-      <ToastContainer />
     </div>
   );
 };

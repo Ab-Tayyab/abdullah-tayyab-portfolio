@@ -1,0 +1,32 @@
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #0e2a47;
+    color: #97a6b4;
+    border: none;
+    border: 1px solid #97a6b4;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Show the button when it should be visible */
+  .scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Hover effect */
+  .scroll-to-top:hover {
+    background-color: #97a6b4;
+    color: #0e2a47;
+    border: 1px solid #0e2a47;
+  }
+  

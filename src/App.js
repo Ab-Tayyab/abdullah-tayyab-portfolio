@@ -7,11 +7,12 @@ import Project from "./component/project/Project";
 import Faq from "./component/faqs/Faq";
 import Contact from "./component/contact/Contact";
 import Footer from "./component/footer/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "./App.css";
+import CustomCursor from "./component/customCursor/cursor";
+import Loading from "./component/loading/loading";
 import { Helmet } from "react-helmet";
 import photo from "./images/logo3.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,7 @@ const App = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once:false
+      once: false,
     });
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -39,17 +40,10 @@ const App = () => {
       </Helmet>
       <div className="scroll-container">
         {isLoading ? (
-          <ul className="loader">
-            <li style={{ "--i": 1 }}>W</li>
-            <li style={{ "--i": 2 }}>E</li>
-            <li style={{ "--i": 3 }}>L</li>
-            <li style={{ "--i": 4 }}>C</li>
-            <li style={{ "--i": 5 }}>O</li>
-            <li style={{ "--i": 6 }}>M</li>
-            <li style={{ "--i": 7 }}>E</li>
-          </ul>
+          <Loading />
         ) : (
           <>
+            <CustomCursor />
             <Navbar />
             <Home />
             <About />

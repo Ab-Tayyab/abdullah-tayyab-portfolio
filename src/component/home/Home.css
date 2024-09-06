@@ -33,7 +33,7 @@
   color: #97a6b4;
   font-family: "Roboto", sans-serif;
 }
-.home-parent-child1-subchild1 > img {
+.home-parent-child1> img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -42,52 +42,12 @@
   background-color: #97a6b4; 
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 0, 0, 0.1); 
   border: 4px solid rgba(255, 255, 255, 0.5);
-}
 
-
-.home-parent-child1-subchild1 > h1 {
-  text-align: center;
-}
-
-.home-parent-child1-subchild1 > hr {
-  width: 100px;
-  margin: auto;
-  border: 1.5px solid #97a6b4;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.home-parent-child1-subchild1 > p {
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.home-parent-child1-subchild2 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #ffffff;
-  margin: auto;
-  padding: 10px 20px 10px 20px;
-}
-
-.home-parent-child1-subchild2 > a {
-  color: #03405b;
-  font-size: 30px;
-}
-
-.home-parent-child1-subchild2 > a:hover {
-  color: #97a6b4;
-  transition: 1s ease;
 }
 
 .home-parent-child2 {
   display: flex;
   justify-content: space-between;
-}
-
-.home-parent-child2-subchild {
-  max-width: 450px;
 }
 
 .home-parent-child2-subchild2 {

@@ -81,8 +81,10 @@
 .about-heading {
   padding-top: 20px;
   font-family: sans-serif;
+  font-size: 35px;
   font-weight: 800;
   color: #0e2a47;
+  text-align: center;
 }
 .about-name {
   font-size: 35px;
@@ -140,7 +142,7 @@
 .p-experience p {
   font-size: 16px;
   font-weight: 400;
-  color: #0e2a47;
+  color: #97a6b4;
 }
 
 .about-skill-child > span {
@@ -171,7 +173,7 @@
   font-size: 22px;
   font-family: sans-serif;
   font-weight: 400;
-  color: #0e2a47;
+  color: #97a6b4;
 }
 
 .about-btn {
@@ -201,6 +203,11 @@
   transition: 0.5s ease;
 }
 
+.about-child2-skill span{
+  font-weight: 800;
+  font-size: 30px;
+}
+
 .skill-bars {
   display: flex;
   flex-wrap: wrap;
@@ -218,21 +225,21 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
-  color: #0e2a47;
+  color: #97a6b4;
   font-size: 16px;
   font-weight: 800;
 }
 
 .bar {
   height: 10px;
-  background-color: #97a6b4;
+  background-color: #0e2a47;
   border: 1px solid #97a6b4;
   border-radius: 5px;
   position: relative;
 }
 
 .fill {
-  background-color: #0e2a47;
+  background-color: #97a6b4;
   height: 100%;
   border-radius: 5px;
 }

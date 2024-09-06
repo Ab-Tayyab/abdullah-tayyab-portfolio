@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Project.css';
 import { projectdata } from './ProjectAPI'
 import LinkOutlinedIcon from '@mui/icons-material/LinkOutlined';
@@ -25,7 +25,7 @@ const Project = () => {
                                         </h1>
                                         <p>{item.detail}</p>
                                         <div>
-                                            <a href={item.url} target='_blank'>
+                                            <a href={item.url} target='_blank' rel="noreferrer">
                                                 <LinkOutlinedIcon style={{
                                                     fontSize: "40px",
                                                     color: "#97a6b4",

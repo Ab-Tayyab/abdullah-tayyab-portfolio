@@ -2,7 +2,6 @@ import React from "react";
 import photo from "../../images/photo3.png";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import "./Home.css";
-
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -11,11 +10,7 @@ const Home = () => {
   return (
     <div className="home-parent" id="home">
       <div className="home-parent-child1">
-        <div className="home-parent-child1-subchild">
-          <div className="home-parent-child1-subchild1">
-            <img className="img-animation" src={photo} />
-          </div>
-        </div>
+        <img className="img-animation" src={photo} alt="Personal Showcase"/>
       </div>
       <div>
         <div className="home-parent-child2">
