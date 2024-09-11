@@ -75,7 +75,7 @@ export const projectdata = [
     id: 11,
     name: "Calculator",
     img: s7,
-    url: "https://simple-reactjs-calculator.netlify.app/",
+    url: "https://mera-hisaab-kitaab.vercel.app/",
     detail:
       "Calculator provides simple and advanced mathematical functions in a beautifully designed app. • Perform basic calculations such as addition, subtraction, multiplication, and division.",
   },
