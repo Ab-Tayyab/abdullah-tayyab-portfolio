@@ -14,8 +14,8 @@ const Project = () => {
   const handleClosePopup = () => {
     setPopupVisible(false);
     setTimeout(() => {
-      setSelectedProject(null); // Wait for the animation to finish before closing completely
-    }, 500); // Match the animation duration (0.5s)
+      setSelectedProject(null);
+    }, 500);
   };
 
   return (
@@ -40,9 +40,10 @@ const Project = () => {
               <div className="project-overlay">
                 <div className="project-text">
                   <h1 style={{ color: "white" }}>{item.name}</h1>
-                  <p>{item.detail}</p>
-                  {/* Button to open the popup */}
-                  <button onClick={() => handleOpenPopup(item)}>More Details</button>
+                  <i
+                    className="fa fa-eye"
+                    onClick={() => handleOpenPopup(item)}
+                  />
                 </div>
               </div>
             </div>
@@ -50,14 +51,27 @@ const Project = () => {
         })}
       </div>
 
-      {/* Fullscreen popup */}
+      {/* popup  */}
       {selectedProject && (
         <div className={`popup-overlay ${isPopupVisible ? "active" : ""}`}>
           <div className="popup-content">
             <h1>{selectedProject.name}</h1>
-            <p>{selectedProject.detail}</p>
-            <img src={selectedProject.img} alt={selectedProject.name} width="100%" height="300px" />
+            <h3>
+              Tools: <span>{selectedProject.tools}</span>
+            </h3>
+            <h3>
+              Description:<p>{selectedProject.detail}</p>
+            </h3>
+            <img src={selectedProject.img} alt={selectedProject.name} />
             <button onClick={handleClosePopup}>Close</button>
+            <div>
+              <a href={selectedProject.url} target="_blank">
+                Site: <i class="fa fa-link" />
+              </a>
+              <a href={selectedProject.github} target="_blank">
+                Github: <i class="fa fa-github" />
+              </a>
+            </div>
           </div>
         </div>
       )}

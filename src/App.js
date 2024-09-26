@@ -9,7 +9,7 @@ import Contact from "./component/contact/Contact";
 import Footer from "./component/footer/Footer";
 import CustomCursor from "./component/customCursor/cursor";
 import Loading from "./component/loading/loading";
-import ContactPopup from "./component/contactPopup/ContactPopup"; 
+import ContactPopup from "./component/contactPopup/ContactPopup";
 import { Helmet } from "react-helmet";
 import photo from "./images/logo3.png";
 import AOS from "aos";
@@ -17,7 +17,7 @@ import "aos/dist/aos.css";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // State for popup
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -25,25 +25,32 @@ const App = () => {
       once: false,
     });
 
-    const timer = setTimeout(() => {
+    const loadingTimer = setTimeout(() => {
       setIsLoading(false);
     }, 2500);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(loadingTimer);
   }, []);
 
   useEffect(() => {
     if (!isLoading) {
-      // Show popup after 3 seconds when loading is done
       const popupTimer = setTimeout(() => {
         setIsPopupOpen(true);
-      }, 10000);
-      return () => clearTimeout(popupTimer);
+      }, 100);
+
+      const intervalTimer = setInterval(() => {
+        setIsPopupOpen(true);
+      }, 90000);
+
+      return () => {
+        clearTimeout(popupTimer);
+        clearInterval(intervalTimer);
+      };
     }
   }, [isLoading]);
 
   const closePopup = () => {
-    setIsPopupOpen(false); // Close popup
+    setIsPopupOpen(false); 
   };
 
   return (
@@ -73,7 +80,6 @@ const App = () => {
 
             {/* Contact Popup */}
             <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
-            
           </>
         )}
       </div>

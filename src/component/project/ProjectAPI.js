@@ -15,6 +15,8 @@ export const projectdata = [
     name: "Coffee Shop",
     img: s4,
     url: "https://coffee-shoop.vercel.app/",
+    tools:"HTML, CSS, Javascript NodeJs, ExpressJS, MongoDB",
+    github:"https://github.com/Ab-Tayyab/Coffee-Shop-site",
     detail:
       "A sleek, user-friendly coffee shop website featuring an intuitive reservation system, responsive design, and a visually appealing layout with seamless navigation, showcasing menu items and services with modern aesthetics.",
   },
@@ -27,7 +29,7 @@ export const projectdata = [
   },
   {
     id: 3,
-    name: "User Login Signup Form",
+    name: "User Form",
     img: s9,
     url: "https://userloginform.vercel.app/",
     detail:
