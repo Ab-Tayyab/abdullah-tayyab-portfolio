@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactPopup.css";
+import dp from '../../images/photo1.png'
 
 const ContactPopup = ({ isOpen, onClose }) => {
   const onDownloadResume = () => {
@@ -17,28 +18,40 @@ const ContactPopup = ({ isOpen, onClose }) => {
       <div
         className={`contact-popup-content ${isOpen ? "slide-in" : "slide-out"}`}
       >
-        <h1>Contact Me</h1>
-        <h2>
-          Email:
+        <div className="popup-img">
+        <img src={dp} alt="Profile Dp"/>
+        </div>
+        <h1 className="popup-name">Abdullah</h1>
+        <h2>Tayyab</h2>
+        <h3 className="popup-proffession">Frontend Developer</h3>
+        <h4><span>Co</span>ntact</h4>
+        <div>
+        <i class="fa fa-envelope"/>
           <a href="mailto: abdullahtayyab894@gmail.com" target="_blank">
             abdullahtayyab894@gamil.com
           </a>
-        </h2>
-        <h2>
-          Linked:
-          <a href="https://www.linkedin.com/in/abdullah--tayyab/" target="_blank">
+        </div>
+        <div>
+        <i class="fa fa-linkedin"/>
+          <a
+            href="https://www.linkedin.com/in/abdullah--tayyab/"
+            target="_blank"
+          >
             https://www.linkedin.com/in/abdullah--tayyab/
           </a>
-        </h2>
-        <h2>
-          GitHub:
+        </div>
+        <div>
+        <i class="fa fa-github"/>
           <a href="https://github.com/Ab-Tayyab" target="_blank">
             https://github.com/Ab-Tayyab
           </a>
-        </h2>
-        <h2>
-          Whatsapp: <a href="https://wa.me/+923085630574" target="_blank">+92 308 5630574</a>
-        </h2>
+        </div>
+        <div>
+        <i class="fa fa-whatsapp"/>
+          <a href="https://wa.me/+923085630574" target="_blank">
+            +92 308 5630574
+          </a>
+        </div>
         <div>
           <div className="contact-btn">
             <button className="contact-resume" onClick={onDownloadResume}>
@@ -49,7 +62,7 @@ const ContactPopup = ({ isOpen, onClose }) => {
             </button>
           </div>
         </div>
-        <button onClick={onClose}>Close</button>
+        <i class="fa fa-close" onClick={onClose} />
       </div>
     </div>
   );

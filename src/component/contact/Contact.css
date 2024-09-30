@@ -62,8 +62,8 @@
   padding: 20px;
   caret-color: #97a6b4;
   outline: none;
-  border-radius: 5px;
   color: #97a6b4;
+  transition: 0.5s all;
 }
 
 .contact-form > input::placeholder,
@@ -75,7 +75,8 @@
 
 .contact-form > input:focus,
 .contact-form > textarea:focus {
-  border-left: 2px solid #97a6b4;
+  border: 2.5px solid #97a6b4;
+  border-radius: 10px;
 }
 
 .contact-form > textarea {

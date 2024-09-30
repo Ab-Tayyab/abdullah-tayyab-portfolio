@@ -126,7 +126,7 @@ const Form = () => {
               required
               />
               <p>
-                Fill out the form below and i will try to get back to you within 24h
+                Fill out the form above and i will try to get back to you within 24H
               </p>
             <button type="submit">Send a Message</button>
           </form>

@@ -36,7 +36,7 @@ const App = () => {
     if (!isLoading) {
       const popupTimer = setTimeout(() => {
         setIsPopupOpen(true);
-      }, 100);
+      }, 10000);
 
       const intervalTimer = setInterval(() => {
         setIsPopupOpen(true);
