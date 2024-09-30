@@ -25,6 +25,7 @@ export const projectdata = [
     name: "Internee.Pk",
     img: s2,
     url: "https://internee-pk-redesign.vercel.app/",
+    github:"https://github.com/Ab-Tayyab/redesign-internee.pk",
     detail: "Internship task to redesign Internee.PK website using react.",
   },
   {
@@ -32,6 +33,7 @@ export const projectdata = [
     name: "User Form",
     img: s9,
     url: "https://userloginform.vercel.app/",
+    github:"https://github.com/Ab-Tayyab/signup-login-using-firebase",
     detail:
       "Internship task create signup, login and reset password form using firebase",
   },
@@ -40,6 +42,7 @@ export const projectdata = [
     name: "Weather App",
     img: s10,
     url: "https://weatheruptodate.vercel.app/",
+    github:"https://github.com/Ab-Tayyab/weather-app",
     detail: "Weather app build by open weather API using fetch method",
   },
   {
@@ -47,6 +50,7 @@ export const projectdata = [
     name: "CV Maker App",
     img: s11,
     url: "https://mycvmaker.vercel.app/",
+    github:"https://github.com/Ab-Tayyab/cv-builder",
     detail: "Create your cv using mycvmaker app",
   },
   {
