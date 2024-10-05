@@ -8,6 +8,7 @@ import s8 from "../../images/T1.png";
 import s9 from "../../images/L1.png";
 import s10 from "../../images/W2.png";
 import s11 from "../../images/C1.png";
+import s12 from "../../images/s12.png";
 
 export const projectdata = [
   {
@@ -28,6 +29,15 @@ export const projectdata = [
     tools:"HTML, CSS,  React-JS, Custom animation, Responsiveness",
     github:"https://github.com/Ab-Tayyab/redesign-internee.pk",
     detail: "Internship task to redesign Internee.PK website using react.",
+  },
+  {
+    id: 2,
+    name: "Shopping Store",
+    img: s12,
+    url: "https://shopping-dukaan.vercel.app/",
+    tools:"HTML, CSS,  React-JS, Custom animation, Responsiveness",
+    github:"https://github.com/Ab-Tayyab/shopping-store/tree/master/frontend",
+    detail: "Redesign Unze.com.pk website using react.",
   },
   {
     id: 3,
