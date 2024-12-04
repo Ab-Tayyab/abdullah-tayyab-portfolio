@@ -3,9 +3,7 @@
   padding-bottom: 20px;
 }
 
-.project-container {
-  justify-content: space-evenly;
-}
+
 
 .project-menu {
   width: 70%;
@@ -54,7 +52,7 @@
 }
 
 .project-parent {
-  width: calc(100%-350px);
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
