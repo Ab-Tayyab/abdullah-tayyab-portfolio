@@ -9,11 +9,12 @@ import s9 from "../../images/L1.png";
 import s10 from "../../images/W2.png";
 import s11 from "../../images/C1.png";
 import s12 from "../../images/s12.png";
+import s13 from "../../images/task1.png";
 
 export const projectdata = [
   {
     id: 1,
-    category: ["Feature-Project", "Javascript","Full-Stack"],
+    category: ["Feature-Project", "Javascript", "Full-Stack"],
     name: "Coffee Shop",
     img: s4,
     url: "https://coffee-shoop.vercel.app/",
@@ -127,5 +128,16 @@ export const projectdata = [
     github: "https://github.com/Ab-Tayyab/react-calculator",
     detail:
       "Calculator provides simple and advanced mathematical functions in a beautifully designed app. • Perform basic calculations such as addition, subtraction, multiplication, and division.",
+  },
+  {
+    id: 11,
+    category: ["HTML-&-CSS"],
+    name: "UI Design",
+    img: s13,
+    url: "https://frontend-day-1.vercel.app/",
+    tools: "HTML, CSS",
+    github: "https://github.com/Ab-Tayyab/frontend-layout/tree/master/day%201",
+    detail:
+      "Create a simple UI Design using HTML and CSS.",
   },
 ];
