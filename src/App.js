@@ -69,15 +69,17 @@ const App = () => {
         ) : (
           <>
             <CustomCursor />
-            {/* <Navbar /> */}
-            {/* <Home /> */}
-            {/* <About /> */}
-            {/* <Skill /> */}
+            <Navbar />
+            <Home />
+            <About />
+            <Skill />
             <Project />
             <Faq />
             <Contact />
             <Footer />
-            {/* <ContactPopup isOpen={isPopupOpen} onClose={closePopup} /> */}
+
+            {/* Contact Popup */}
+            <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
           </>
         )}
       </div>
