@@ -34,7 +34,7 @@ export const projectdata = [
     detail: "Internship task to redesign Internee.PK website using react.",
   },
   {
-    id: 2,
+    id: 3,
     category: ["Feature-Project", "React"],
     name: "Shopping Store",
     img: s12,
@@ -44,7 +44,7 @@ export const projectdata = [
     detail: "Redesign Unze.com.pk website using react.",
   },
   {
-    id: 3,
+    id: 4,
     category: ["React"],
     name: "User Form",
     img: s9,
@@ -55,7 +55,7 @@ export const projectdata = [
       "Internship task create signup, login and reset password form using firebase",
   },
   {
-    id: 4,
+    id: 5,
     category: ["React"],
     name: "Weather App",
     img: s10,
@@ -65,7 +65,7 @@ export const projectdata = [
     detail: "Weather app build by open weather API using fetch method",
   },
   {
-    id: 5,
+    id: 6,
     category: ["Feature-Project", "React"],
     name: "CV Maker App",
     img: s11,
@@ -75,7 +75,7 @@ export const projectdata = [
     detail: "Create your cv using mycvmaker app",
   },
   {
-    id: 6,
+    id: 7,
     category: ["React"],
     name: "Expense Tracker App",
     img: s1,
@@ -86,7 +86,7 @@ export const projectdata = [
       "An expense tracker app allows you to monitor and categorize your expenses. Feature Include: Edit",
   },
   {
-    id: 7,
+    id: 8,
     category: ["React"],
     name: "To Do List",
     img: s8,
@@ -97,7 +97,7 @@ export const projectdata = [
       "A list of errands and other tasks – often written on a piece of paper as a memory aid – that one needs or intends to accomplish.",
   },
   {
-    id: 8,
+    id: 9,
     category: ["React"],
     name: "Quiz App",
     img: s5,
@@ -108,7 +108,7 @@ export const projectdata = [
       "A quiz is a form of game or mind sport in which players attempt to answer questions correctly on one or several specific topics.",
   },
   {
-    id: 9,
+    id: 10,
     category: ["React"],
     name: "Time Cunter App",
     img: s6,
@@ -119,7 +119,7 @@ export const projectdata = [
       " App timer is an incredibly useful tool for time management if you are someone who struggles to get off an app. It can help you save time.",
   },
   {
-    id: 10,
+    id: 11,
     category: ["React"],
     name: "Calculator",
     img: s7,
@@ -130,7 +130,7 @@ export const projectdata = [
       "Calculator provides simple and advanced mathematical functions in a beautifully designed app. • Perform basic calculations such as addition, subtraction, multiplication, and division.",
   },
   {
-    id: 11,
+    id: 12,
     category: ["HTML-&-CSS"],
     name: "UI Design",
     img: s13,

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../images/logo2.png";
 import ScrollToTop from "../topScrolling/scrolling";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,34 +33,24 @@ const Navbar = () => {
     <nav className={`navbar-container ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar">
         <div className="navbar-logo">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="Portfolio Logo" />
-          </a>
+          </Link>
         </div>
         <div className={`navbar-menu all-menu ${menuOpen ? "open" : ""}`}>
           <ul>
             <li onClick={handleToggle}>
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li onClick={handleToggle}>
-              <a href="#about">About</a>
+            <Link to="/about">About</Link>
             </li>
             <li onClick={handleToggle}>
-              <a href="#skill">Skill</a>
+              <Link to="/all-projects">Project</Link>
             </li>
             <li onClick={handleToggle}>
-              <a href="#project">Project</a>
+              <Link to="/faqs">Faq</Link>
             </li>
-            <li onClick={handleToggle}>
-              <a href="#faq">Faq</a>
-            </li>
-            <li className="action_btn" onClick={handleToggle}>
-              <a href="#contact">Contact</a>
-            </li>
-            <button className="resume-btn" onClick={onDownloadResume}>
-              Reasume
-              <i class="fa fa-download"></i>
-            </button>
           </ul>
         </div>
         <div
@@ -77,29 +68,19 @@ const Navbar = () => {
         className={`mobile-menu all-menu ${menuOpen ? "open" : ""}`}
       >
         <ul>
-          <li onClick={handleToggle}>
-            <a href="#home">Home</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#about">About</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#skill">Skill</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#project">Project</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#faq">Faq</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#contact">Contact</a>
-          </li>
-          <button className="resume-btn" onClick={onDownloadResume}>
-            Reasume
-            <i class="fa fa-download"></i>
-          </button>
-        </ul>
+            <li onClick={handleToggle}>
+              <Link to="/">Home</Link>
+            </li>
+            <li onClick={handleToggle}>
+            <Link to="/about">About</Link>
+            </li>
+            <li onClick={handleToggle}>
+              <Link to="/all-projects">Project</Link>
+            </li>
+            <li onClick={handleToggle}>
+              <Link to="/faqs">Faq</Link>
+            </li>
+          </ul>
       </div>
       <ScrollToTop />
     </nav>

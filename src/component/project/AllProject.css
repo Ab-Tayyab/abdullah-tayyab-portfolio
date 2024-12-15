@@ -1,0 +1,94 @@
+.all-project-main {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .all-project-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .project-btn {
+    background-color: #0e2a47;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .project-btn:hover {
+    background-color: #97a6b4;
+  }
+  
+  .all-project-parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .all-project-child {
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+  }
+  
+  .all-project-child img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.3s ease;
+  }
+  
+  .all-project-child:hover img {
+    filter: brightness(50%);
+  }
+  
+  .all-project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(14, 42, 71, 0.9); /* Slightly transparent overlay */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  }
+  
+  .all-project-child:hover .all-project-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .all-project-overlay h1 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #97a6b4;
+  }
+  
+  .project-links {
+    margin-top: 10px;
+  }
+  
+  .project-links a {
+    color: #97a6b4;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .project-links a:hover {
+    color: white;
+  }
+  

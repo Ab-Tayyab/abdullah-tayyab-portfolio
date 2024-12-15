@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./component/navbar/Navbar";
 import Home from "./component/home/Home";
-import About from "./component/about/About";
 import Skill from "./component/skill/Skill";
 import Project from "./component/project/Project";
-import Faq from "./component/faqs/Faq";
 import Contact from "./component/contact/Contact";
 import Footer from "./component/footer/Footer";
 import CustomCursor from "./component/customCursor/cursor";
 import Loading from "./component/loading/loading";
 import ContactPopup from "./component/contactPopup/ContactPopup";
+import About from "./component/about/About";
+import AllProject from "./component/project/AllProject";
+import Faq from "./component/faqs/Faq";
 import { Helmet } from "react-helmet";
 import photo from "./images/logo3.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import './App.css'
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,35 +57,41 @@ const App = () => {
   };
 
   return (
-    <div>
-      <Helmet>
-        <title>Abdullah Tayyab</title>
-        <link
-          rel="icon"
-          href={photo}
-          style={{ width: "32px", height: "32px" }}
-        />
-      </Helmet>
-      <div className="scroll-container">
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <>
-            <CustomCursor />
-            <Navbar />
-            <Home />
-            <About />
-            <Skill />
-            <Project />
-            <Faq />
-            <Contact />
-            <Footer />
-
-            {/* Contact Popup */}
-            <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
-          </>
-        )}
-      </div>
+    <div className="main-container">
+      <Router>
+        <Helmet>
+          <title>Abdullah Tayyab</title>
+          <link rel="icon" href={photo} />
+        </Helmet>
+        <div className="scroll-container">
+          {isLoading ? (
+            <Loading />
+          ) : (
+            <>
+              <CustomCursor />
+              <Navbar />
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Home />
+                      <Skill />
+                      <Project />
+                      <Contact />
+                      <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
+                    </>
+                  }
+                />
+                <Route path="/about" element={<About />} />
+                <Route path="/all-projects" element={<AllProject />} />
+                <Route path="/faqs" element={<Faq />} />
+              </Routes>
+              <Footer />
+            </>
+          )}
+        </div>
+      </Router>
     </div>
   );
 };

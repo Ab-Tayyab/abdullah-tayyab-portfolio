@@ -76,7 +76,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="home-contact img-animation">
+        <div className="home-contact">
           <a
             className="social-link social-icone"
             href="https://wa.me/+923085630574"

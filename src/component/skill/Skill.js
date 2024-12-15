@@ -7,7 +7,7 @@ const Skill = () => {
     return (
         <>
             <div id="skill">
-                <h1 className='skill-parent-heading'>My Skills</h1>
+                <h1 className='skill-parent-heading'>Skills & Tools</h1>
                 <div className='skill-parent'>
                     <div>
                         {
