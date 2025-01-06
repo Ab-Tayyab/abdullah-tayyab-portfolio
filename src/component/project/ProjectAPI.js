@@ -142,7 +142,7 @@ export const projectdata = [
   },
   {
     id: 13,
-    category: ["Feature_project", "Javascript"],
+    category: ["Feature-Project", "Javascript"],
     name: "Tic Tac Toe game",
     img: s14,
     url: "https://ab-tayyab.github.io/tic-tac-toe/",
