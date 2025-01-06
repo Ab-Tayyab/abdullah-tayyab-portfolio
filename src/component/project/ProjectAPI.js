@@ -10,6 +10,7 @@ import s10 from "../../images/W2.png";
 import s11 from "../../images/C1.png";
 import s12 from "../../images/s12.png";
 import s13 from "../../images/task1.png";
+import s14 from "../../images/T2.png";
 
 export const projectdata = [
   {
@@ -137,7 +138,16 @@ export const projectdata = [
     url: "https://frontend-day-1.vercel.app/",
     tools: "HTML, CSS",
     github: "https://github.com/Ab-Tayyab/frontend-layout/tree/master/day%201",
-    detail:
-      "Create a simple UI Design using HTML and CSS.",
+    detail: "Create a simple UI Design using HTML and CSS.",
+  },
+  {
+    id: 13,
+    category: ["Feature_project", "Javascript"],
+    name: "Tic Tac Toe game",
+    img: s14,
+    url: "https://ab-tayyab.github.io/tic-tac-toe/",
+    tools: "HTML, CSS, Javascript",
+    github: "https://github.com/Ab-Tayyab/tic-tac-toe",
+    detail: "",
   },
 ];
