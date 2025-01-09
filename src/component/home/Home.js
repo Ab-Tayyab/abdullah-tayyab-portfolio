@@ -87,7 +87,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className="slide-container">
+      {/* <div className="slide-container">
         <div className="slide-text">
           <p>
             Welcome! I'm Abdullah Tayyab, a creative, confident reactjs
@@ -100,7 +100,7 @@ const Home = () => {
             Site.
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -30,7 +30,7 @@ const App = () => {
 
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 0);
 
     return () => clearTimeout(loadingTimer);
   }, []);
