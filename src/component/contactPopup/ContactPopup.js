@@ -27,7 +27,7 @@ const ContactPopup = ({ isOpen, onClose }) => {
         <h4><span>Co</span>ntact</h4>
         <div>
         <i class="fa fa-envelope"/>
-          <a href="mailto: abdullahtayyab894@gmail.com" target="_blank">
+          <a href="mailto: abdullahtayyab894@gmail.com" target="_blank" rel="noreferrer">
             abdullahtayyab894@gamil.com
           </a>
         </div>
@@ -36,19 +36,20 @@ const ContactPopup = ({ isOpen, onClose }) => {
           <a
             href="https://www.linkedin.com/in/abdullah--tayyab/"
             target="_blank"
+            rel="noreferrer"
           >
             https://www.linkedin.com/in/abdullah--tayyab/
           </a>
         </div>
         <div>
         <i class="fa fa-github"/>
-          <a href="https://github.com/Ab-Tayyab" target="_blank">
+          <a href="https://github.com/Ab-Tayyab" target="_blank" rel="noreferrer">
             https://github.com/Ab-Tayyab
           </a>
         </div>
         <div>
         <i class="fa fa-whatsapp"/>
-          <a href="https://wa.me/+923085630574" target="_blank">
+          <a href="https://wa.me/+923085630574" target="_blank" rel="noreferrer">
             +92 308 5630574
           </a>
         </div>

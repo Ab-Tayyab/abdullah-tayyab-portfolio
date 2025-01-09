@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Project.css";
 import { projectdata } from "./ProjectAPI";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -7,24 +7,9 @@ import { Link } from "react-router-dom";
 
 
 const Project = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isPopupVisible, setPopupVisible] = useState(false);
-
   const filteredProjects = projectdata.filter((item) =>
     item.category.includes("Feature-Project")
   );
-
-  const handleOpenPopup = (project) => {
-    setSelectedProject(project);
-    setPopupVisible(true);
-  };
-
-  const handleClosePopup = () => {
-    setPopupVisible(false);
-    setTimeout(() => {
-      setSelectedProject(null);
-    }, 500);
-  };
 
   return (
     <div className="project-main" id="project">
@@ -46,10 +31,10 @@ const Project = () => {
                 ))}
               </div>
               <div className="project-link">
-                <a href={item.github} target="_blank">
+                <a href={item.github} target="_blank" rel="noreferrer">
                   <GitHubIcon />
                 </a>
-                <a href={item.url} target="_blank">
+                <a href={item.url} target="_blank" rel="noreferrer">
                   <NorthEastIcon />
                 </a>
               </div>
@@ -68,10 +53,10 @@ const Project = () => {
                 ))}
               </div>
               <div className="project-link ">
-                <a href={item.github} target="_blank">
+                <a href={item.github} target="_blank" rel="noreferrer">
                   <GitHubIcon />
                 </a>
-                <a href={item.url} target="_blank">
+                <a href={item.url} target="_blank" rel="noreferrer">
                   <NorthEastIcon />
                 </a>
               </div>

@@ -23,12 +23,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const onDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href = "./abdullah tayyab resume.pdf";
-    link.click();
-  };
   return (
     <nav className={`navbar-container ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar">
