@@ -27,37 +27,40 @@ body {
   font-size: 18px;
   text-align: justify;
 }
-.heading-styling{
-    font-size: 40px;
-    font-weight: 800 !important;
-    text-align: center !important;
+.heading-styling {
+  color: #97a6b4;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 800 !important;
+  text-align: center !important;
 }
 
-.heading-span{
-    border-bottom: 5px double #97a6b4;
+.heading-span {
+  border-bottom: 5px double #97a6b4;
 }
 
 /* links animation  */
 
-
 .links-animation a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 100%;
-    height: 2px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    transform-origin: center;
-    transition: transform 0.6s ease; 
-  }
-  
-  .links-animation a:hover {
-    color: #ffffff;
-  }
-  
-  .links-animation a:hover::before {
-    transform: translateX(-50%) scaleX(1);
-  }
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  transform-origin: center;
+  transition: transform 0.6s ease;
+}
+
+.links-animation a:hover {
+  color: #ffffff;
+}
+
+.links-animation a:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}

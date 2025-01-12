@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./component/navbar/Navbar";
 import Home from "./component/home/Home";
 import Skill from "./component/skill/Skill";
-import Project from "./component/project/Project";
 import Contact from "./component/contact/Contact";
 import Footer from "./component/footer/Footer";
 import CustomCursor from "./component/customCursor/cursor";
 import Loading from "./component/loading/loading";
 import ContactPopup from "./component/contactPopup/ContactPopup";
 import About from "./component/about/About";
-import AllProject from "./component/project/AllProject";
-import Faq from "./component/faqs/Faq";
+import AllProject from "./component/project/Project";
 import { Helmet } from "react-helmet";
 import photo from "./images/logo3.png";
 import AOS from "aos";
@@ -71,7 +69,7 @@ const App = () => {
             <Home />
             <About />
             <Skill />
-            <Project />
+            <AllProject />
             <Contact />
             <Footer />
             {/* <ContactPopup isOpen={isPopupOpen} onClose={closePopup} /> */}

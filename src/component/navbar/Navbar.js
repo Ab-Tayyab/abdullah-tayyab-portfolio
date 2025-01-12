@@ -97,7 +97,7 @@ const Navbar = () => {
               href="https://www.facebook.com/this.abdullah.8/"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-easing="linear"
               data-aos-duration="500"
             >
@@ -108,7 +108,7 @@ const Navbar = () => {
               href="https://github.com/Ab-Tayyab"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-easing="linear"
               data-aos-duration="1000"
             >
@@ -119,7 +119,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/abdullah--tayyab/"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-easing="linear"
               data-aos-duration="1500"
             >
@@ -130,7 +130,7 @@ const Navbar = () => {
               href="https://wa.me/+923085630574"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-easing="linear"
               data-aos-duration="2000"
             >

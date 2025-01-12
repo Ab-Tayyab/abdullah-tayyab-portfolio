@@ -22,7 +22,7 @@ export const projectdata = [
     tools: "HTML, CSS, Javascript, NodeJs, ExpressJS, MongoDB, Responsiveness",
     github: "https://github.com/Ab-Tayyab/Coffee-Shop-site",
     detail:
-      "A sleek, user-friendly coffee shop website featuring an intuitive reservation system, responsive design, and a visually appealing layout with seamless navigation, showcasing menu items and services with modern aesthetics.",
+      "A sleek, user-friendly coffee shop website featuring an intuitive reservation system, responsive design, and a visually appealing layout.",
   },
   {
     id: 2,
@@ -95,7 +95,7 @@ export const projectdata = [
     tools: "HTML, CSS, React-JS, CRUD operation",
     github: "https://github.com/Ab-Tayyab/to-do-list-reactjs",
     detail:
-      "A list of errands and other tasks – often written on a piece of paper as a memory aid – that one needs or intends to accomplish.",
+      "A list of errands and other tasks often written on a piece of paper as a memory aid that one needs or intends to accomplish.",
   },
   {
     id: 9,
@@ -128,7 +128,7 @@ export const projectdata = [
     tools: "HTML, CSS, ReactJS",
     github: "https://github.com/Ab-Tayyab/react-calculator",
     detail:
-      "Calculator provides simple and advanced mathematical functions in a beautifully designed app. • Perform basic calculations such as addition, subtraction, multiplication, and division.",
+      "Calculator provides simple and advanced mathematical functions in a beautifully designed app.",
   },
   {
     id: 12,
@@ -138,7 +138,7 @@ export const projectdata = [
     url: "https://frontend-day-1.vercel.app/",
     tools: "HTML, CSS",
     github: "https://github.com/Ab-Tayyab/frontend-layout/tree/master/day%201",
-    detail: "Create a simple UI Design using HTML and CSS.",
+    detail: "Build a simple UI Design using HTML and CSS.",
   },
   {
     id: 13,
@@ -148,6 +148,6 @@ export const projectdata = [
     url: "https://ab-tayyab.github.io/tic-tac-toe/",
     tools: "HTML, CSS, Javascript",
     github: "https://github.com/Ab-Tayyab/tic-tac-toe",
-    detail: "",
+    detail: "Build a Tic Tac Toe game, which following feature like: Random player selection, Final result, Interactive UI",
   },
 ];
