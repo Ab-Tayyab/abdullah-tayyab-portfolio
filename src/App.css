@@ -4,6 +4,8 @@ html, body {
     padding: 0;
     height: 100%;
     scroll-behavior: smooth;
+  background-color: #0e2a47;
+
   }
   
   .main-container {

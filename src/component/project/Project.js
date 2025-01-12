@@ -68,9 +68,6 @@ const Project = () => {
         )
 
       ))}
-      <Link to="/all-projects" style={{textDecoration:"none"}}>
-      <button className="all-projects-btn">ALL PROJECTS</button>
-      </Link>
     </div>
   );
 };

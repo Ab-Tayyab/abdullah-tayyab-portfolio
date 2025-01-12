@@ -1,11 +1,8 @@
-#skill {
-  background-color: #0e2a47;
-  color: #97a6b4;
-  text-align: center;
+#skill{
+  min-height: 60vh;
 }
-
 .skill-parent-heading {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .carousel {
@@ -29,11 +26,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* pause animation on hover  */
 
-/* .wrap:hover {
+.wrap:hover {
     animation-play-state: paused; 
-  } */
+  }
 
 @keyframes slide {
   to {
@@ -42,6 +38,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  #skill{
+    min-height: 0px;
+  }
   .skill-parent-heading {
     padding-top: 50px;
   }

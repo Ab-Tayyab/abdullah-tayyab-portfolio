@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./component/navbar/Navbar";
 import Home from "./component/home/Home";
 import Skill from "./component/skill/Skill";
@@ -16,7 +15,7 @@ import { Helmet } from "react-helmet";
 import photo from "./images/logo3.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import './App.css'
+import "./component/generalStyling.css";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,45 +52,32 @@ const App = () => {
   }, [isLoading]);
 
   const closePopup = () => {
-    setIsPopupOpen(false); 
+    setIsPopupOpen(false);
   };
 
   return (
     <div className="main-container">
-      <Router>
-        <Helmet>
-          <title>Abdullah Tayyab</title>
-          <link rel="icon" href={photo} />
-        </Helmet>
-        <div className="scroll-container">
-          {isLoading ? (
-            <Loading />
-          ) : (
-            <>
-              <CustomCursor />
-              <Navbar />
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <>
-                      <Home />
-                      <Skill />
-                      <Project />
-                      <Contact />
-                      <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
-                    </>
-                  }
-                />
-                <Route path="/about" element={<About />} />
-                <Route path="/all-projects" element={<AllProject />} />
-                <Route path="/faqs" element={<Faq />} />
-              </Routes>
-              <Footer />
-            </>
-          )}
-        </div>
-      </Router>
+      <Helmet>
+        <title>Abdullah Tayyab</title>
+        <link rel="icon" href={photo} />
+      </Helmet>
+      <div className="scroll-container">
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <CustomCursor />
+            <Navbar />
+            <Home />
+            <About />
+            <Skill />
+            <Project />
+            <Contact />
+            <Footer />
+            {/* <ContactPopup isOpen={isPopupOpen} onClose={closePopup} /> */}
+          </>
+        )}
+      </div>
     </div>
   );
 };

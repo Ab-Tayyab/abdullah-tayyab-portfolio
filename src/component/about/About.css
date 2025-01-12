@@ -1,4 +1,4 @@
-.about-container {
+/* .about-container {
   width: 100%;
   overflow: hidden;
 }
@@ -39,7 +39,7 @@
   padding: 20px;
 }
 
-/* Slide animation */
+
 .slide-animation.about {
   animation: slideLeft 0.5s ease-in-out;
 }
@@ -257,5 +257,29 @@
   .about-experience>div>h3{
     padding-left: 40px;
     text-align: left;
+  }
+} */
+
+.about-container{
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: -150px;
+}
+
+.about-content, .about-heading{
+  max-width: 50%;
+}
+
+@media (max-width:768px) {
+  .about-container{
+    flex-direction: column-reverse;
+    margin-top: 0px;
+  }
+  .about-content, .about-heading{
+    max-width: 100%;
+    padding: 10px 30px;
   }
 }

@@ -13,8 +13,8 @@ const Faq = () => {
     };
 
     return (
-        <div className='accordion-parent'>
-            <div className="accordion" id="faq">
+        <div className='accordion-parent' id='faqs'>
+            <div className="accordion" >
                 <h1>Frequently Asked Question</h1>
                 {faqData.map((faq, index) => (
                     <div key={index} className="accordion-item">
