@@ -17,7 +17,7 @@ const Project = () => {
 
   const handleClick = (item) => {
     setProjectCategory(item);
-    setVisibleProjects(6); 
+    setVisibleProjects(6);
   };
 
   const handleShowMore = () => {
@@ -33,9 +33,14 @@ const Project = () => {
 
   return (
     <div className="projects-container" id="project">
-      <h1 className="heading-styling">My Projects</h1>
+      <h1 className="heading-styling">My <span className="heading-span">Projects</span></h1>
 
       <div className="projects-internal-container">
+      <p className="projects-description text-styling">
+        Showcasing a diverse collection of my projects, highlighting innovative
+        solutions, technical expertise, and creative designs across various
+        technologies.
+      </p>
         <div className="project-menu">
           {uniqueCategory.map((category, index) => (
             <button

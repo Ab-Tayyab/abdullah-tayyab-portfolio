@@ -39,6 +39,7 @@ body {
 
 .heading-span {
   border-bottom: 5px double #97a6b4;
+  padding-bottom: 5px;
 }
 
 /* links animation  */

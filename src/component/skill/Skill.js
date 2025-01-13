@@ -7,7 +7,7 @@ const Skill = () => {
   return (
     <>
       <div id="skill">
-        <h1 className="skill-parent-heading text-styling heading-styling">Skills & Tools</h1>
+        <h1 className="skill-parent-heading text-styling heading-styling"><span className="heading-span">Skills</span> & <span className="heading-span">Tools</span></h1>
         <div className="carousel">
           <div className="wrap">
             {SkillApi.map((img) => {
