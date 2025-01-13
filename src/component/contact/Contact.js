@@ -49,7 +49,9 @@ const Form = () => {
 
   return (
     <div className="contact" id="contact">
-      <h1>Contact Me</h1>
+      <h1>
+        <span className="heading-span">Contact</span> Me
+      </h1>
       <div className="contact-container">
         <div className="contact-child1">
           <h2>Let's make something amazing together.</h2>
@@ -117,18 +119,21 @@ const Form = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              />
+            />
             <textarea
               placeholder="Type Your Message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              />
-              <p>
-                Fill out the form above and i will try to get back to you within 24H
-              </p>
-            <button type="submit">Send a Message</button>
+            />
+            <p>
+              Fill out the form above and i will try to get back to you within
+              24H
+            </p>
+            <button className="btn-animation" type="submit">
+              Send a Message
+            </button>
           </form>
         </div>
         <ToastContainer />

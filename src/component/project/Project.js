@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Project.css";
+import "../generalStyling.css"
 import { projectdata } from "./ProjectAPI";
 
 const Project = () => {
@@ -33,7 +34,7 @@ const Project = () => {
 
   return (
     <div className="projects-container" id="project">
-      <h1 className="heading-styling">My <span className="heading-span">Projects</span></h1>
+      <h1 className="heading-styling"><span className="heading-span">Projects</span></h1>
 
       <div className="projects-internal-container">
       <p className="projects-description text-styling">
@@ -44,7 +45,7 @@ const Project = () => {
         <div className="project-menu">
           {uniqueCategory.map((category, index) => (
             <button
-              className="project-btn"
+              className="btn-animation"
               key={index}
               onClick={() => handleClick(category)}
             >
@@ -100,7 +101,7 @@ const Project = () => {
         </div>
 
         {filteredProjects.length > visibleProjects && (
-          <button className="show-more-btn" onClick={handleShowMore}>
+          <button className="btn-animation show-more-btn" onClick={handleShowMore}>
             Show More
           </button>
         )}

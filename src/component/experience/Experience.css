@@ -1,0 +1,57 @@
+.experience-container{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.experience-container>div>h1{
+padding-bottom: 50px;
+}
+.experience-content {
+  display: flex;
+  justify-content: center;
+}
+
+.experience-menu {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  color: #97a6b4;
+}
+
+.experience-menu > h1 {
+  font-size: 20px;
+  padding: 5px 0px;
+}
+
+.experience-menu>h1.active{
+    border-left: 2px solid #97a6b4;
+    padding-left: 15px;
+}
+
+.experience-menu > h1:hover {
+  cursor: pointer;
+}
+.experience-detail {
+  width: 600px;
+}
+.experience-detail {
+  color: #97a6b4;
+}
+
+.experience-detail h1 {
+  font-size: 30px;
+}
+
+.experience-detail h2 {
+  font-size: 20px;
+  background-color: #97a6b4;
+  color: #0e2a47;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.experience-name {
+  display: flex;
+}

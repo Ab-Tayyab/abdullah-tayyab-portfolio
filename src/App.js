@@ -8,12 +8,13 @@ import CustomCursor from "./component/customCursor/cursor";
 import Loading from "./component/loading/loading";
 import ContactPopup from "./component/contactPopup/ContactPopup";
 import About from "./component/about/About";
-import AllProject from "./component/project/Project";
+import Project from "./component/project/Project";
 import { Helmet } from "react-helmet";
 import photo from "./images/logo3.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./component/generalStyling.css";
+import Experience from "./component/experience/Experience";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -69,7 +70,8 @@ const App = () => {
             <Home />
             <About />
             <Skill />
-            <AllProject />
+            <Experience />
+            <Project />
             <Contact />
             <Footer />
             {/* <ContactPopup isOpen={isPopupOpen} onClose={closePopup} /> */}
