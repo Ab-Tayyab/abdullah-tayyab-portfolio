@@ -13,35 +13,46 @@ import mongodb from "../../images/db.png";
 export const SkillApi = [
   {
     img: html,
+    name: "HTML",
   },
   {
     img: css,
+    name: "CSS",
   },
   {
     img: js,
+    name: "Javascript",
   },
   {
     img: react,
-  },
-  {
-    img: mui,
-  },
-  {
-    img: bs,
-  },
-  {
-    img: git,
-  },
-  {
-    img: vs,
-  },
-  {
-    img: npm,
+    name: "React",
   },
   {
     img: nodejs,
+    name: "NodeJs",
   },
   {
     img: mongodb,
+    name: "MongoDB",
+  },
+  {
+    img: npm,
+    name: "Npm",
+  },
+  {
+    img: mui,
+    name: "Metrial UI",
+  },
+  {
+    img: bs,
+    name: "BootStrap",
+  },
+  {
+    img: git,
+    name: "Git",
+  },
+  {
+    img: vs,
+    name: "Visual Studio",
   },
 ];

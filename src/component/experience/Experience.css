@@ -55,3 +55,74 @@ padding-bottom: 50px;
 .experience-name {
   display: flex;
 }
+
+
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 20px;
+  }
+
+  .experience-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-menu {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .experience-menu > h1 {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .experience-menu > h1.active {
+    border-left: none;
+    border-bottom: 2px solid #97a6b4;
+    padding-left: 0;
+    padding-bottom: 5px;
+  }
+
+  .experience-detail {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .experience-detail h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .experience-detail h2 {
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .experience-name {
+    justify-content: center;
+  }
+
+  .experience-detail p {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-menu > h1 {
+    font-size: 16px;
+  }
+
+  .experience-detail h1 {
+    font-size: 20px;
+  }
+
+  .experience-detail h2 {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+}

@@ -1,72 +1,68 @@
-#skill{
-  min-height: 60vh;
+#skill {
+  min-height: 70vh;
 }
-.skill-parent-heading {
+
+.skill-heading {
   padding-bottom: 50px;
 }
-
-.carousel {
+.skill-container {
   width: 100%;
-  overflow: hidden;
-  padding: 20px;
-}
-
-.wrap {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 300px;
-  justify-items: stretch;
-  animation: slide 30s linear infinite;
-  animation-play-state: running;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
-
-.wrap img {
+.skill-card {
   width: 150px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 150px;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: 0px 0px 4px #97a6b4;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-
-.wrap:hover {
-    animation-play-state: paused; 
-  }
-
-@keyframes slide {
-  to {
-    translate: calc(-6 * 300px);
-  }
+.skill-card > img {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
 
-@media screen and (max-width: 768px) {
-  #skill{
-    min-height: 0px;
-  }
-  .skill-parent-heading {
-    padding-top: 50px;
-  }
-  .wrap {
-    grid-auto-columns: 200px;
-  }
-  .wrap img {
-    width: 120px;
-  }
-  @keyframes slide {
-    to {
-      translate: calc(-6 * 200px);
-    }
-  }
+.skill-card > h1 {
+  color: #97a6b4;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 5px;
+  padding-top: 5px;
+  transition: color 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 480px) {
-  .wrap {
-    grid-auto-columns: 150px;
+.skill-card > div {
+  width: 50px;
+  border-bottom: 2px solid #97a6b4;
+  margin-top: 5px;
+  margin: auto;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Hover effects */
+
+.skill-card:hover > h1 {
+  color: #0e2a47;
+}
+
+.skill-card:hover > div {
+  border-bottom: 2px solid #0e2a47;
+}
+
+@media (max-width:379px) {
+  .skill-card{
+    width: 140px;
+    height: 140px;
+    margin: 10px;
   }
-  .wrap img {
-    width: 100px;
-  }
-  @keyframes slide {
-    to {
-      translate: calc(-6 * 200px);
-    }
-  }
+  
 }
