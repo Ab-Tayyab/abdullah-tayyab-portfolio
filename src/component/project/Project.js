@@ -33,7 +33,7 @@ const Project = () => {
   const projectsToShow = filteredProjects.slice(0, visibleProjects);
 
   return (
-    <div className="projects-container" id="project">
+    <div className="projects-container section" id="project">
       <h1 className="heading-styling"><span className="heading-span">Projects</span></h1>
 
       <div className="projects-internal-container">

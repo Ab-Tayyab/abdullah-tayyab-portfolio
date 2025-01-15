@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import '../generalStyling.css'
+import "../generalStyling.css";
 import logo from "../../images/logo2.png";
 import ScrollToTop from "../topScrolling/scrolling";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
@@ -8,7 +8,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,35 +27,24 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <nav className={`navbar-container ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar">
         <div className="navbar-logo">
-          <a href="#home">
+          <div onClick={() => onNavigate("home")}>
             <img src={logo} alt="Portfolio Logo" />
-          </a>
+          </div>
         </div>
         <div className={`links-animation navbar-menu all-menu ${menuOpen ? "open" : ""}`}>
-        <ul>
-          <li onClick={handleToggle}>
-            <a href="#home">Home</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#about">About</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#skill">Skills</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#experience">Experience</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#project">Project</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+          <ul>
+            <li onClick={() => { onNavigate("home"); handleToggle(); }}>Home</li>
+            <li onClick={() => { onNavigate("about"); handleToggle(); }}>About</li>
+            <li onClick={() => { onNavigate("skill"); handleToggle(); }}>Skills</li>
+            <li onClick={() => { onNavigate("experience"); handleToggle(); }}>Experience</li>
+            <li onClick={() => { onNavigate("project"); handleToggle(); }}>Project</li>
+            <li onClick={() => { onNavigate("contact"); handleToggle(); }}>Contact</li>
+          </ul>
         </div>
         <div
           className={`navbar-toggle ${menuOpen ? "change" : ""}`}
@@ -64,7 +53,6 @@ const Navbar = () => {
         >
           <div className="btn1 all-btn"></div>
           <div className="btn2 all-btn"></div>
-          <div className="btn3 all-btn"></div>
         </div>
       </div>
       <div
@@ -72,71 +60,47 @@ const Navbar = () => {
         className={`links-animation mobile-menu all-menu ${menuOpen ? "open" : ""}`}
       >
         <ul>
-          <li onClick={handleToggle}>
-            <a href="#home">Home</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#about">About</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#skill">Skills</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#experience">Experience</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#project">Project</a>
-          </li>
-          <li onClick={handleToggle}>
-            <a href="#contact">Contact</a>
-          </li>
+          <li onClick={() => { onNavigate("home"); handleToggle(); }}>Home</li>
+          <li onClick={() => { onNavigate("about"); handleToggle(); }}>About</li>
+          <li onClick={() => { onNavigate("skill"); handleToggle(); }}>Skills</li>
+          <li onClick={() => { onNavigate("experience"); handleToggle(); }}>Experience</li>
+          <li onClick={() => { onNavigate("project"); handleToggle(); }}>Project</li>
+          <li onClick={() => { onNavigate("contact"); handleToggle(); }}>Contact</li>
         </ul>
         <div className="navbar-links links-animation">
-            <a
-              className="social"
-              href="https://www.facebook.com/this.abdullah.8/"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="500"
-            >
-              <FacebookOutlinedIcon />
-            </a>
-            <a
-              className="social"
-              href="https://github.com/Ab-Tayyab"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="1000"
-            >
-              <GitHubIcon />
-            </a>
-            <a
-              className="social"
-              href="https://www.linkedin.com/in/abdullah--tayyab/"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="1500"
-            >
-              <LinkedInIcon />
-            </a>
-            <a
-              className="social"
-              href="https://wa.me/+923085630574"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="2000"
-            >
-              <WhatsAppIcon />
-            </a>
-          </div>
+          <a
+            className="social"
+            href="https://www.facebook.com/this.abdullah.8/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FacebookOutlinedIcon />
+          </a>
+          <a
+            className="social"
+            href="https://github.com/Ab-Tayyab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon />
+          </a>
+          <a
+            className="social"
+            href="https://www.linkedin.com/in/abdullah--tayyab/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon />
+          </a>
+          <a
+            className="social"
+            href="https://wa.me/+923085630574"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <WhatsAppIcon />
+          </a>
+        </div>
       </div>
       <ScrollToTop />
     </nav>

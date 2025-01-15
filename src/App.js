@@ -26,12 +26,14 @@ const App = () => {
       once: false,
     });
 
+    // loading animation and popup
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 0);
+    }, 5000);
 
     return () => clearTimeout(loadingTimer);
   }, []);
+
 
   useEffect(() => {
     if (!isLoading) {
@@ -54,6 +56,25 @@ const App = () => {
     setIsPopupOpen(false);
   };
 
+  // Scroll to a section and update the URL path
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80; 
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+      if (id === "home") {
+        window.history.pushState({}, "", `/`);
+      } else {
+        window.history.pushState({}, "", `/${id}`);
+      }
+    }
+  };
+  
+  
   return (
     <div className="main-container">
       <Helmet>
@@ -66,15 +87,27 @@ const App = () => {
         ) : (
           <>
             <CustomCursor />
-            <Navbar />
-            <Home />
-            <About />
-            <Skill />
-            <Experience />
-            <Project />
-            <Contact />
+            <Navbar onNavigate={scrollToSection} />
+            <div id="home">
+              <Home />
+            </div>
+            <div id="about">
+              <About />
+            </div>
+            <div id="skill">
+              <Skill />
+            </div>
+            <div id="experience">
+              <Experience />
+            </div>
+            <div id="project">
+              <Project />
+            </div>
+            <div id="contact">
+              <Contact />
+            </div>
             <Footer />
-            {/* <ContactPopup isOpen={isPopupOpen} onClose={closePopup} /> */}
+            <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
           </>
         )}
       </div>

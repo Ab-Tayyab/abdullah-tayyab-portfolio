@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const Home = () => {
   return (
-    <div className="home-container" id="home">
+    <div className="home-container section" id="home">
       <div className="home-img">
         <img className="img-animation" src={photo} alt="Personal Showcase" />
       </div>

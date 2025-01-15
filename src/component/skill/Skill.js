@@ -6,7 +6,7 @@ import { SkillApi } from "./SkillAPI";
 const Skill = () => {
   return (
     <>
-      <div id="skill">
+      <div id="skill" className="section">
         <h1 className="skill-heading text-styling heading-styling">
           <span className="heading-span">Skills</span>
           <span className="heading-span">Tools</span>
