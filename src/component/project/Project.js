@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Project.css";
-import "../generalStyling.css"
+import "../generalStyling.css";
 import { projectdata } from "./ProjectAPI";
 
 const Project = () => {
   const [projectCategory, setProjectCategory] = useState("Feature-Project");
   const [visibleProjects, setVisibleProjects] = useState(6);
+  const cardRefs = useRef([]);
 
   const uniqueCategory = [
     "Feature-Project",
@@ -32,16 +33,45 @@ const Project = () => {
 
   const projectsToShow = filteredProjects.slice(0, visibleProjects);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const animationClass = entry.target.dataset.animation;
+            entry.target.classList.add(animationClass);
+          } else {
+            entry.target.classList.remove(entry.target.dataset.animation);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    // Observe only valid elements
+    cardRefs.current
+      .filter((el) => el !== null) // Exclude null or undefined refs
+      .forEach((card) => observer.observe(card));
+
+    return () => {
+      cardRefs.current
+        .filter((el) => el !== null) // Exclude null or undefined refs
+        .forEach((card) => observer.unobserve(card));
+    };
+  }, [projectsToShow]);
+
   return (
     <div className="projects-container section" id="project">
-      <h1 className="heading-styling"><span className="heading-span">Projects</span></h1>
+      <h1 className="heading-styling">
+        <span className="heading-span">Projects</span>
+      </h1>
 
       <div className="projects-internal-container">
-      <p className="projects-description text-styling">
-        Showcasing a diverse collection of my projects, highlighting innovative
-        solutions, technical expertise, and creative designs across various
-        technologies.
-      </p>
+        <p className="projects-description text-styling">
+          Showcasing a diverse collection of my projects, highlighting
+          innovative solutions, technical expertise, and creative designs across
+          various technologies.
+        </p>
         <div className="project-menu">
           {uniqueCategory.map((category, index) => (
             <button
@@ -56,12 +86,16 @@ const Project = () => {
 
         <div className="project-card-container">
           {projectsToShow.length > 0 ? (
-            projectsToShow.map((item) => (
+            projectsToShow.map((item, index) => (
               <div
                 className="project-card"
-                data-aos="zoom-in-up"
-                data-aos-duration="3000"
                 key={item.id}
+                data-animation={
+                  index % 2 === 0
+                    ? "animate-slide-bottom-left"
+                    : "animate-slide-bottom-right"
+                }
+                ref={(el) => (cardRefs.current[index] = el)}
               >
                 <img src={item.img} alt={item.name} className="project-img" />
                 <div className="project-overlay">
@@ -101,7 +135,10 @@ const Project = () => {
         </div>
 
         {filteredProjects.length > visibleProjects && (
-          <button className="btn-animation show-more-btn" onClick={handleShowMore}>
+          <button
+            className="btn-animation show-more-btn"
+            onClick={handleShowMore}
+          >
             Show More
           </button>
         )}

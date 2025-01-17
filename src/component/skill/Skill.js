@@ -12,9 +12,9 @@ const Skill = () => {
           <span className="heading-span">Tools</span>
         </h1>
         <div className="skill-container">
-          {SkillApi.map((item) => {
+          {SkillApi.map((item,key) => {
             return (
-              <div className="skill-card btn-animation">
+              <div className="skill-card btn-animation" key={key}>
                 <img src={item.img} alt={item.name} />
                 <h1>{item.name}</h1>
                 <div></div>
