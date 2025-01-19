@@ -58,7 +58,7 @@ const ContactPopup = ({ isOpen, onClose }) => {
             <button className="contact-resume" onClick={onDownloadResume}>
               Resume
             </button>
-            <button className="contact-letter" onClick={onDownloadCoverLetter}>
+            <button className="contact-resume" onClick={onDownloadCoverLetter}>
               Cover Letter
             </button>
           </div>

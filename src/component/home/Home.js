@@ -8,38 +8,31 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const Home = () => {
   return (
     <div className="home-container section" id="home">
-      <div className="home-img">
+      <div
+        className="home-img"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="2000"
+      >
         <img className="img-animation" src={photo} alt="Personal Showcase" />
       </div>
-      <div className="home-content">
+      <div
+        className="home-content"
+        data-aos="zoom-in-left"
+        data-aos-easing="linear"
+        data-aos-duration="3000"
+      >
         <div className="home-text text-styling">
-          <h3 data-aos="fade-left" data-aos-duration="1000">
-            I'm Abdullah Tayyab
-          </h3>
-          <p data-aos="fade-left" data-aos-duration="1500">
+          <h3>I'm Abdullah Tayyab</h3>
+          <p>
             Javascript Developer || React-Js Developer || Mern Stack Developer
           </p>
-          <div className="home-contact" 
-            data-aos="fade-up" data-aos-duration="2000"
-          >
-            <a
-              href="https://wa.me/+923085630574"
-              target="_blank"
-            >
-              Say Hello !
-            </a>
-          </div>
-        </div>
-        <div>
           <div className="home-links links-animation">
             <a
               className="social"
               href="https://www.facebook.com/this.abdullah.8/"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
-              data-aos-easing="linear"
-              data-aos-duration="500"
             >
               <FacebookOutlinedIcon />
             </a>
@@ -48,9 +41,6 @@ const Home = () => {
               href="https://github.com/Ab-Tayyab"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
-              data-aos-easing="linear"
-              data-aos-duration="1000"
             >
               <GitHubIcon />
             </a>
@@ -59,9 +49,6 @@ const Home = () => {
               href="https://www.linkedin.com/in/abdullah--tayyab/"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
-              data-aos-easing="linear"
-              data-aos-duration="1500"
             >
               <LinkedInIcon />
             </a>
@@ -70,11 +57,13 @@ const Home = () => {
               href="https://wa.me/+923085630574"
               target="_blank"
               rel="noopener noreferrer"
-              data-aos="fade-left"
-              data-aos-easing="linear"
-              data-aos-duration="2000"
             >
               <WhatsAppIcon />
+            </a>
+          </div>
+          <div className="home-contact">
+            <a href="https://wa.me/+923085630574" target="_blank">
+              Say Hello !
             </a>
           </div>
         </div>

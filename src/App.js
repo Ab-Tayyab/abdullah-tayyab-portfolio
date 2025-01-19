@@ -29,7 +29,7 @@ const App = () => {
     // loading animation and popup
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 0);
+    }, 5000);
 
     return () => clearTimeout(loadingTimer);
   }, []);
@@ -107,7 +107,7 @@ const App = () => {
               <Contact />
             </div>
             <Footer />
-            {/* <ContactPopup isOpen={isPopupOpen} onClose={closePopup} /> */}
+            <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
           </>
         )}
       </div>

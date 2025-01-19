@@ -39,13 +39,8 @@
 
 .contact-link > a {
   color: #97a6b4;
+  padding-bottom: 5px;
 }
-
-.contact-link > a:hover {
-  color: #0e2a47;
-  transition: 1s ease;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;

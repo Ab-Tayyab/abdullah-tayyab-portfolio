@@ -1,21 +1,21 @@
 .footer {
-    position: relative;
     width: 100%;
-    padding-bottom: 10px;
+    min-height: 10vh;
     border-top: 1px solid #97a6b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
 }
 .footer h5 {
     color: #97a6b4;
-    text-align: center;
-    padding-top: 25px;
-    padding-left:10px;
-    padding-right: 10px;
-
+font-size: 1.1rem;
+font-weight: 0;
+padding: 5px;
 }
 
 .footer h5>span{
     color: #FFFFFF;
-    padding: 0px 10px;
     font-weight: 800;
-    border-bottom: 1px solid #FFFFFF;
+    border-bottom: 1px dotted #FFFFFF;
 }

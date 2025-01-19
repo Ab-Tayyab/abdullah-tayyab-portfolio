@@ -11,14 +11,9 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const Navbar = ({ onNavigate }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
   };
 
   const handleScroll = () => {
@@ -34,8 +29,15 @@ const Navbar = ({ onNavigate }) => {
   }, []);
 
   return (
-    <nav className={`navbar-container ${isScrolled ? "scrolled" : ""} ${isDarkMode?"dark-mode":"light-mode"}`}>
-      <div className="navbar">
+    <nav
+      className={`navbar-container ${isScrolled ? "scrolled" : ""}`}
+      >
+      <div className="navbar"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+      
+      >
         <div className="navbar-logo">
           <div onClick={() => onNavigate("home")}>
             <img src={logo} alt="Portfolio Logo" />
@@ -104,11 +106,6 @@ const Navbar = ({ onNavigate }) => {
         >
           <div className="btn1 all-btn"></div>
           <div className="btn2 all-btn"></div>
-        </div>
-        <div className="themeToggle">
-          <button onClick={toggleTheme}>
-            {isDarkMode ? "light Mode" : "Dark Mode"}
-          </button>
         </div>
       </div>
       <div
