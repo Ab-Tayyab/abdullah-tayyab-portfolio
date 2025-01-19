@@ -11,9 +11,14 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const Navbar = ({ onNavigate }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
   };
 
   const handleScroll = () => {
@@ -29,21 +34,67 @@ const Navbar = ({ onNavigate }) => {
   }, []);
 
   return (
-    <nav className={`navbar-container ${isScrolled ? "scrolled" : ""}`}>
+    <nav className={`navbar-container ${isScrolled ? "scrolled" : ""} ${isDarkMode?"dark-mode":"light-mode"}`}>
       <div className="navbar">
         <div className="navbar-logo">
           <div onClick={() => onNavigate("home")}>
             <img src={logo} alt="Portfolio Logo" />
           </div>
         </div>
-        <div className={`links-animation navbar-menu all-menu ${menuOpen ? "open" : ""}`}>
+        <div
+          className={`links-animation navbar-menu all-menu ${
+            menuOpen ? "open" : ""
+          }`}
+        >
           <ul>
-            <li onClick={() => { onNavigate("home"); handleToggle(); }}>Home</li>
-            <li onClick={() => { onNavigate("about"); handleToggle(); }}>About</li>
-            <li onClick={() => { onNavigate("skill"); handleToggle(); }}>Skills</li>
-            <li onClick={() => { onNavigate("experience"); handleToggle(); }}>Experience</li>
-            <li onClick={() => { onNavigate("project"); handleToggle(); }}>Project</li>
-            <li onClick={() => { onNavigate("contact"); handleToggle(); }}>Contact</li>
+            <li
+              onClick={() => {
+                onNavigate("home");
+                handleToggle();
+              }}
+            >
+              Home
+            </li>
+            <li
+              onClick={() => {
+                onNavigate("about");
+                handleToggle();
+              }}
+            >
+              About
+            </li>
+            <li
+              onClick={() => {
+                onNavigate("skill");
+                handleToggle();
+              }}
+            >
+              Skills
+            </li>
+            <li
+              onClick={() => {
+                onNavigate("experience");
+                handleToggle();
+              }}
+            >
+              Experience
+            </li>
+            <li
+              onClick={() => {
+                onNavigate("project");
+                handleToggle();
+              }}
+            >
+              Project
+            </li>
+            <li
+              onClick={() => {
+                onNavigate("contact");
+                handleToggle();
+              }}
+            >
+              Contact
+            </li>
           </ul>
         </div>
         <div
@@ -54,18 +105,67 @@ const Navbar = ({ onNavigate }) => {
           <div className="btn1 all-btn"></div>
           <div className="btn2 all-btn"></div>
         </div>
+        <div className="themeToggle">
+          <button onClick={toggleTheme}>
+            {isDarkMode ? "light Mode" : "Dark Mode"}
+          </button>
+        </div>
       </div>
       <div
         id="mobileMenu"
-        className={`links-animation mobile-menu all-menu ${menuOpen ? "open" : ""}`}
+        className={`links-animation mobile-menu all-menu ${
+          menuOpen ? "open" : ""
+        }`}
       >
         <ul>
-          <li onClick={() => { onNavigate("home"); handleToggle(); }}>Home</li>
-          <li onClick={() => { onNavigate("about"); handleToggle(); }}>About</li>
-          <li onClick={() => { onNavigate("skill"); handleToggle(); }}>Skills</li>
-          <li onClick={() => { onNavigate("experience"); handleToggle(); }}>Experience</li>
-          <li onClick={() => { onNavigate("project"); handleToggle(); }}>Project</li>
-          <li onClick={() => { onNavigate("contact"); handleToggle(); }}>Contact</li>
+          <li
+            onClick={() => {
+              onNavigate("home");
+              handleToggle();
+            }}
+          >
+            Home
+          </li>
+          <li
+            onClick={() => {
+              onNavigate("about");
+              handleToggle();
+            }}
+          >
+            About
+          </li>
+          <li
+            onClick={() => {
+              onNavigate("skill");
+              handleToggle();
+            }}
+          >
+            Skills
+          </li>
+          <li
+            onClick={() => {
+              onNavigate("experience");
+              handleToggle();
+            }}
+          >
+            Experience
+          </li>
+          <li
+            onClick={() => {
+              onNavigate("project");
+              handleToggle();
+            }}
+          >
+            Project
+          </li>
+          <li
+            onClick={() => {
+              onNavigate("contact");
+              handleToggle();
+            }}
+          >
+            Contact
+          </li>
         </ul>
         <div className="navbar-links links-animation">
           <a

@@ -4,9 +4,15 @@ import { ExperienceData } from "./ExperienceApi";
 
 const Experience = () => {
   const [experienceCategory, setExperienceCategory] = useState("Gamica Cloud");
+  const [animating, setAnimating] = useState(false);
 
   const handleClick = (item) => {
-    setExperienceCategory(item);
+    if (item === experienceCategory) return;
+    setAnimating(true);
+    setTimeout(() => {
+      setExperienceCategory(item);
+      setAnimating(false);
+    }, 250); 
   };
 
   return (
@@ -29,12 +35,16 @@ const Experience = () => {
               </h1>
             ))}
           </div>
-          <div className="experience-detail">
+          <div
+            className={`experience-detail ${animating ? "fade-out" : "fade-in"}`}
+          >
             {ExperienceData.map((item) => {
               if (item.name === experienceCategory) {
                 return (
                   <div key={item.name}>
-                    <h1 className="experience-type text-styling">{item.type}</h1>
+                    <h1 className="experience-type text-styling">
+                      {item.type}
+                    </h1>
                     <div className="experience-name">
                       <h2 className="text-styling">
                         {item.name} ({item.duration})

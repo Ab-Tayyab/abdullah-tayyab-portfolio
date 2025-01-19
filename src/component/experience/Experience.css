@@ -1,11 +1,12 @@
-.experience-container{
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.experience-container {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.experience-container>div>h1{
-padding-bottom: 50px;
+.experience-container > div > h1 {
+  padding-bottom: 50px;
 }
 .experience-content {
   display: flex;
@@ -24,19 +25,27 @@ padding-bottom: 50px;
   padding: 5px 0px;
 }
 
-.experience-menu>h1.active{
-    border-left: 2px solid #97a6b4;
-    padding-left: 15px;
+.experience-menu > h1.active {
+  border-left: 2px solid #97a6b4;
+  padding-left: 15px;
 }
 
 .experience-menu > h1:hover {
   cursor: pointer;
 }
+
 .experience-detail {
   width: 600px;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
-.experience-detail {
-  color: #97a6b4;
+
+.experience-detail.fade-in {
+  animation: fadeInUp 0.5s forwards;
+}
+
+.experience-detail.fade-out {
+  animation: fadeOutDown 0.5s forwards;
 }
 
 .experience-detail h1 {
@@ -55,7 +64,6 @@ padding-bottom: 50px;
 .experience-name {
   display: flex;
 }
-
 
 @media (max-width: 768px) {
   .experience-container {
@@ -124,5 +132,17 @@ padding-bottom: 50px;
   .experience-detail h2 {
     font-size: 16px;
     padding: 5px 8px;
+  }
+}
+
+/* Fade in and slide-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

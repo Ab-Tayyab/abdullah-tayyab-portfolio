@@ -6,8 +6,32 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: #0e2a47;
   transition: all 0.3s ease;
+}
+
+/* Default (Light Mode) */
+.navbar-container.light-mode,body.light-mode {
+  background-color: #0e2a47;
+}
+
+/* Dark Mode */
+.navbar-container.dark-mode,body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Optional: Style the toggle button */
+.themeToggle button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle button:hover {
+  background-color: #0056b3;
 }
 
 .navbar-container.scrolled {
@@ -90,8 +114,7 @@
   transition: all 0.5s;
 }
 
-
-.btn2{
+.btn2 {
   width: 70%;
   margin-left: auto;
 }
@@ -99,7 +122,6 @@
 .change .btn1 {
   transform: rotate(45deg) translate(2px, 5px);
 }
-
 
 .change .btn2 {
   width: 100%;
