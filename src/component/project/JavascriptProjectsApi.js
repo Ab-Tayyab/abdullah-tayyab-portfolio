@@ -32,7 +32,7 @@ const javascriptProjects = [
         img: img3,
         url: "https://signup-and-login-forms.netlify.app/",
         tools: "HTML, CSS, Javascript",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a login and signup with validation and also focus on Interactive UI",
       },
       {
@@ -41,7 +41,7 @@ const javascriptProjects = [
         img: img4,
         url: "https://simple-carousal.netlify.app/",
         tools: "HTML, CSS, Javascript",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a Eye catching image carousal using html, css and javascript",
       },
       {
@@ -50,7 +50,7 @@ const javascriptProjects = [
         img: img5,
         url: "https://swipable-carousal.netlify.app/",
         tools: "HTML, CSS, Javascript",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a Eye catching swipeable image carousal using html, css and javascript",
       },
       {
@@ -59,7 +59,7 @@ const javascriptProjects = [
         img: img6,
         url: "https://frequently-ask-question.netlify.app/",
         tools: "HTML, CSS, Javascript",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a Beautifull Faq component using html, css and javascript also add animation",
       },
 

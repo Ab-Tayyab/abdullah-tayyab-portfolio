@@ -9,7 +9,7 @@ const htmlCssProjects=[
         img: img1,
         url: "https://recipe-page-layout.netlify.app/",
         tools: "HTML, CSS",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a simple UI Design using HTML and CSS.",
       },
       {
@@ -18,7 +18,7 @@ const htmlCssProjects=[
         img: img2,
         url: "https://profile-info-card.netlify.app/",
         tools: "HTML, CSS",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a simple UI Design using HTML and CSS.",
       },
       {
@@ -27,7 +27,7 @@ const htmlCssProjects=[
         img: img3,
         url: "https://huddlle-layout.netlify.app/",
         tools: "HTML, CSS",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a simple UI Design using HTML and CSS.",
       },
       {
@@ -36,7 +36,7 @@ const htmlCssProjects=[
         img: img4,
         url: "https://food-menu-layout.netlify.app/",
         tools: "HTML, CSS",
-        github: "https://github.com/Ab-Tayyab/javascript-projects",
+        github: "https://github.com/Ab-Tayyab/html-css-js-projects",
         detail: "Build a simple UI Design using HTML and CSS.",
       },
 ]
