@@ -1,24 +1,39 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Project.css";
 import "../generalStyling.css";
-import { projectdata } from "./ProjectAPI";
+import featureProjects from './FeatureProjectsApi'
+import fullstackProjects from './FullstackProjectsApi'
+import htmlCssProjects from './HtmlCssProjectsApi'
+import javascriptProjects from "./JavascriptProjectsApi";
+import reactProjects from './ReactProjectsApi'
 
 const Project = () => {
-  const [projectCategory, setProjectCategory] = useState("Feature-Project");
+  const [projectData, setProjectData] = useState(featureProjects);
   const [visibleProjects, setVisibleProjects] = useState(6);
   const cardRefs = useRef([]);
 
-  const uniqueCategory = [
-    "Feature-Project",
-    "Full-Stack",
-    "React",
-    "Javascript",
-    "HTML-&-CSS",
-    "All Projects",
-  ];
-
-  const handleClick = (item) => {
-    setProjectCategory(item);
+  const handleClick = (category) => {
+    let selectedApi = [];
+    switch (category) {
+      case "Feature-Projects":
+        selectedApi = featureProjects;
+        break;
+      case "HTML-&-CSS":
+        selectedApi = htmlCssProjects;
+        break;
+      case "Javascript":
+        selectedApi = javascriptProjects;
+        break;
+      case "React":
+        selectedApi = reactProjects;
+        break;
+      case "Full-Stack":
+        selectedApi = fullstackProjects;
+        break;
+      default:
+        selectedApi = featureProjects;
+    }
+    setProjectData(selectedApi);
     setVisibleProjects(6);
   };
 
@@ -26,12 +41,7 @@ const Project = () => {
     setVisibleProjects((prev) => prev + 3);
   };
 
-  const filteredProjects =
-    projectCategory === "All Projects"
-      ? projectdata
-      : projectdata.filter((item) => item.category.includes(projectCategory));
-
-  const projectsToShow = filteredProjects.slice(0, visibleProjects);
+  const projectsToShow = projectData.slice(0, visibleProjects);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,14 +58,13 @@ const Project = () => {
       { threshold: 0.3 }
     );
 
-    // Observe only valid elements
     cardRefs.current
-      .filter((el) => el !== null) // Exclude null or undefined refs
+      .filter((el) => el !== null)
       .forEach((card) => observer.observe(card));
 
     return () => {
       cardRefs.current
-        .filter((el) => el !== null) // Exclude null or undefined refs
+        .filter((el) => el !== null)
         .forEach((card) => observer.unobserve(card));
     };
   }, [projectsToShow]);
@@ -73,7 +82,7 @@ const Project = () => {
           various technologies.
         </p>
         <div className="project-menu">
-          {uniqueCategory.map((category, index) => (
+          {["Featured-Projects", "HTML-&-CSS","Javascript","React", "Full-Stack" ].map((category, index) => (
             <button
               className="btn-animation"
               key={index}
@@ -134,7 +143,7 @@ const Project = () => {
           )}
         </div>
 
-        {filteredProjects.length > visibleProjects && (
+        {projectData.length > visibleProjects && (
           <button
             className="btn-animation show-more-btn"
             onClick={handleShowMore}
